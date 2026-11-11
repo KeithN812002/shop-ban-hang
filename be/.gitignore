@@ -1,0 +1,66 @@
+### Project specific folders
+/doc/
+/app_log/
+/app_log_debug/
+
+### Maven build
+target/
+*/target/
+
+### Logs
+app_log/
+app_log_debug/
+*.log
+log/
+logs/
+
+### OS files
+.DS_Store
+Thumbs.db
+ehthumbs.db
+desktop.ini
+
+### IDE: IntelliJ IDEA / JetBrains
+.idea/
+*.iml
+*.iws
+*.ipr
+out/
+.fleet/
+
+### Eclipse (phòng khi mở bằng Eclipse)
+.classpath
+.project
+.settings/
+bin/
+
+### VS Code
+.vscode/
+
+### Java
+*.class
+*.jar
+*.war
+*.ear
+*.zip
+*.tar
+*.tar.gz
+
+### Temporary files
+*.swp
+*.swo
+*.tmp
+*.bak
+*.orig
+
+### Coverage / reports
+.scannerwork/
+.sonar/
+jacoco.exec
+coverage/
+
+### Docker / runtime
+.env
+docker-data/
+
+

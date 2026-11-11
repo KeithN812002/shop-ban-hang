@@ -1,0 +1,12 @@
+{
+    "errorTitle": "Không thể hoàn tất đăng nhập",
+    "backToLogin": "Quay về trang đăng nhập",
+    "authenticatingTitle": "Đang xác thực",
+    "pleaseWait": "Anh/chị vui lòng chờ trong giây lát",
+    "progressLabel": "Đang xác thực thông tin người dùng...",
+    "errors": {
+        "missingCode": "Phiên đăng nhập không hợp lệ. Anh/chị vui lòng đăng nhập lại hoặc liên hệ quản trị viên để được hỗ trợ.",
+        "invalidState": "Yêu cầu đăng nhập không hợp lệ. Anh/chị vui lòng đăng nhập lại hoặc liên hệ quản trị viên để được hỗ trợ.",
+        "tokenExchangeFailed": "Hệ thống đang tạm thời gián đoạn. Anh/chị vui lòng thử lại sau hoặc liên hệ quản trị viên để được hỗ trợ."
+    }
+}

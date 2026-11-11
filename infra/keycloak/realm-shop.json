@@ -1,0 +1,58 @@
+{
+  "realm": "shop",
+  "displayName": "Shop",
+  "enabled": true,
+  "sslRequired": "none",
+  "registrationAllowed": false,
+  "registrationEmailAsUsername": false,
+  "rememberMe": false,
+  "verifyEmail": false,
+  "loginWithEmailAllowed": true,
+  "duplicateEmailsAllowed": false,
+  "resetPasswordAllowed": false,
+  "editUsernameAllowed": false,
+  "bruteForceProtected": true,
+  "internationalizationEnabled": true,
+  "supportedLocales": ["vi", "en"],
+  "defaultLocale": "vi",
+  "clients": [
+    {
+      "clientId": "shop-app",
+      "name": "Shop application",
+      "description": "Confidential client shared by the Spring Boot backend, the admin web (8088) and the storefront (3000).",
+      "enabled": true,
+      "protocol": "openid-connect",
+      "publicClient": false,
+      "clientAuthenticatorType": "client-secret",
+      "secret": "${KEYCLOAK_CLIENT_SECRET}",
+      "standardFlowEnabled": true,
+      "directAccessGrantsEnabled": true,
+      "serviceAccountsEnabled": true,
+      "implicitFlowEnabled": false,
+      "bearerOnly": false,
+      "fullScopeAllowed": true,
+      "optionalClientScopes": ["address", "phone", "organization", "offline_access", "microprofile-jwt", "kc-admin-api"],
+      "redirectUris": [
+        "http://localhost:8088/api/sso/callback",
+        "http://localhost:3000/auth/callback"
+      ],
+      "webOrigins": [
+        "http://localhost:8088",
+        "http://localhost:3000"
+      ],
+      "attributes": {
+        "post.logout.redirect.uris": "http://localhost:8088/*##http://localhost:3000/*"
+      }
+    }
+  ],
+  "users": [
+    {
+      "username": "service-account-shop-app",
+      "enabled": true,
+      "serviceAccountClientId": "shop-app",
+      "clientRoles": {
+        "realm-management": ["manage-users", "view-users", "manage-realm"]
+      }
+    }
+  ]
+}

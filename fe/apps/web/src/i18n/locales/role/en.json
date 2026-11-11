@@ -1,0 +1,48 @@
+{
+    "title": {
+        "list": "Function List"
+    },
+    "fields": {
+        "code": "Role Code",
+        "name": "Role Name",
+        "appCode": "App Code"
+    },
+    "actions": {
+        "activeBulk": "Activate",
+        "inactiveBulk": "Deactivate",
+        "deleteBulk": "Delete"
+    },
+    "placeholders": {
+        "name": "Enter permission group name",
+        "code": "Enter permission group code"
+    },
+    "messages": {
+        "confirmActiveTitle": "Confirm Permission Group Activation",
+        "confirmActive": "Are you sure you want to activate the permission group \"{{name}}\"?",
+        "confirmInactiveTitle": "Confirm Permission Group Deactivation",
+        "confirmInactive": "All accounts belonging to the permission group \"{{name}}\" will be deactivated. Are you sure you want to proceed?",
+        "confirmDelete": "Are you sure you want to delete the permission group \"{{name}}\"?",
+        "createSuccess": "Permission group created successfully.",
+        "createError": "Failed to create permission group.",
+        "updateSuccess": "Permission group updated successfully.",
+        "updateError": "Failed to update permission group.",
+        "deleteSuccess": "Permission group deleted successfully.",
+        "deleteError": "Failed to delete permission group.",
+        "activeSuccess": "Permission group activated successfully.",
+        "activeError": "Failed to activate permission group.",
+        "inactiveSuccess": "Permission group deactivated successfully.",
+        "inactiveError": "Failed to deactivate permission group.",
+        "confirmActiveBulkTitle": "Confirm bulk activation",
+        "confirmActiveBulk": "Are you sure you want to activate {{count}} selected role(s)?",
+        "confirmInactiveBulkTitle": "Confirm bulk deactivation",
+        "confirmInactiveBulk": "Are you sure you want to deactivate {{count}} selected role(s)?",
+        "confirmDeleteBulkTitle": "Confirm bulk deletion",
+        "confirmDeleteBulk": "Are you sure you want to delete {{count}} selected role(s)?",
+        "activeBulkSuccess": "Bulk activation successful!",
+        "inactiveBulkSuccess": "Bulk deactivation successful!",
+        "deleteBulkSuccess": "Bulk deletion successful!"
+    },
+    "errors": {
+        "permissionRequired": "Please select at least one permission for the role."
+    }
+}

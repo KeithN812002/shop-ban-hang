@@ -1,0 +1,12 @@
+{
+    "errorTitle": "Unable to complete sign-in",
+    "backToLogin": "Back to login page",
+    "authenticatingTitle": "Authenticating",
+    "pleaseWait": "Please wait a moment",
+    "progressLabel": "Authenticating user information...",
+    "errors": {
+        "missingCode": "Your login session is invalid. Please log in again or contact your administrator for support.",
+        "invalidState": "Your login request is invalid. Please log in again or contact your administrator for support.",
+        "tokenExchangeFailed": "The system is temporarily unavailable. Please try again later or contact your administrator for support."
+    }
+}

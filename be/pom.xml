@@ -1,0 +1,305 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<parent>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-parent</artifactId>
+		<version>4.1.1</version>
+		<relativePath/>
+	</parent>
+
+	<groupId>com.fpt</groupId>
+	<artifactId>core-parent</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<packaging>pom</packaging>
+
+	<properties>
+		<java.version>21</java.version>
+		
+		<!-- Core Libraries -->
+		<modelmapper.version>3.2.7</modelmapper.version>
+		<spring-cloud.version>2025.1.3</spring-cloud.version>
+
+		<!-- Patched versions above the Spring Boot 4.1.1 BOM; remove once Boot ships them -->
+		<jackson-bom.version>3.2.3</jackson-bom.version>
+		<jackson-2-bom.version>2.22.3</jackson-2-bom.version>
+		<tomcat.version>11.0.27</tomcat.version>
+		<logback.version>1.6.5</logback.version>
+		<netty.version>4.2.19.Final</netty.version>
+		<kotlin.version>2.4.21</kotlin.version>
+		<snakeyaml.version>2.7</snakeyaml.version>
+		<postgresql.version>42.7.14</postgresql.version>
+		<hibernate.version>7.4.12.Final</hibernate.version>
+		<hibernate-validator.version>9.1.4.Final</hibernate-validator.version>
+		<httpclient5.version>5.6.5</httpclient5.version>
+		<httpcore5.version>5.4.4</httpcore5.version>
+		<slf4j.version>2.0.20</slf4j.version>
+		<lombok.version>1.18.48</lombok.version>
+		<webjars-locator-lite.version>1.1.5</webjars-locator-lite.version>
+		<maven-compiler-plugin.version>3.16.0</maven-compiler-plugin.version>
+		<maven-surefire-plugin.version>3.6.0</maven-surefire-plugin.version>
+		<maven-install-plugin.version>3.2.0</maven-install-plugin.version>
+		<maven-deploy-plugin.version>3.2.0</maven-deploy-plugin.version>
+		
+		<!-- API Documentation -->
+		<swagger-annotations.version>2.2.55</swagger-annotations.version>
+		<springdoc-openapi.version>3.1.1</springdoc-openapi.version>
+		
+		<!-- Apache Commons -->
+		<commons-io.version>2.22.0</commons-io.version>
+		<commons-compress.version>1.28.0</commons-compress.version>
+		
+		<!-- Security & Cryptography -->
+		<bouncycastle.version>1.86</bouncycastle.version>
+		<nimbus-jose-jwt.version>10.10</nimbus-jose-jwt.version>
+		
+		<!-- Storage -->
+		<minio.version>9.0.3</minio.version>
+		
+		<poi.version>5.5.1</poi.version>
+		
+		<!-- Utilities -->
+		<guava.version>33.7.2-jre</guava.version>
+		
+		<!-- Logging -->
+		<logstash-logback-encoder.version>9.0</logstash-logback-encoder.version>
+		
+		<!-- IDE annotations -->
+		<jetbrains-annotations.version>26.1.0</jetbrains-annotations.version>
+		
+		<!-- Network -->
+		<snappy.version>1.1.10.12</snappy.version>
+		<okio.version>3.18.2</okio.version>
+		<okhttp.version>5.5.0</okhttp.version>
+	</properties>
+
+	<modules>
+		<!-- Core Modules -->
+		<module>core-keycloak</module>
+		<module>core-cache</module>
+		<module>core-common</module>
+		<module>core-persistence</module>
+		<module>core-security</module>
+		<module>core-server</module>
+		<module>core-storage</module>
+		<module>core-email</module>
+
+		<!-- Business Modules - System Administration -->
+		<module>bom-sa</module>
+		<module>res-sa</module>
+
+		<!-- Business Modules - E-commerce shop -->
+		<module>bom-shop</module>
+		<module>res-shop</module>
+	</modules>
+
+	<dependencyManagement>
+		<dependencies>
+			<!-- Internal modules -->
+			<dependency>
+				<groupId>com.fpt</groupId>
+				<artifactId>core-keycloak</artifactId>
+				<version>${project.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.fpt</groupId>
+				<artifactId>core-cache</artifactId>
+				<version>${project.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.fpt</groupId>
+				<artifactId>core-common</artifactId>
+				<version>${project.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.fpt</groupId>
+				<artifactId>core-persistence</artifactId>
+				<version>${project.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.fpt</groupId>
+				<artifactId>core-security</artifactId>
+				<version>${project.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.fpt</groupId>
+				<artifactId>core-server</artifactId>
+				<version>${project.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.fpt</groupId>
+				<artifactId>core-storage</artifactId>
+				<version>${project.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.fpt</groupId>
+				<artifactId>core-email</artifactId>
+				<version>${project.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.fpt</groupId>
+				<artifactId>bom-sa</artifactId>
+				<version>${project.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.fpt</groupId>
+				<artifactId>res-sa</artifactId>
+				<version>${project.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.fpt</groupId>
+				<artifactId>bom-shop</artifactId>
+				<version>${project.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.fpt</groupId>
+				<artifactId>res-shop</artifactId>
+				<version>${project.version}</version>
+			</dependency>
+
+			<!-- Apache Commons -->
+			<dependency>
+				<groupId>commons-io</groupId>
+				<artifactId>commons-io</artifactId>
+				<version>${commons-io.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>org.apache.commons</groupId>
+				<artifactId>commons-compress</artifactId>
+				<version>${commons-compress.version}</version>
+			</dependency>
+
+			<!-- Object Mapping -->
+			<dependency>
+				<groupId>org.modelmapper</groupId>
+				<artifactId>modelmapper</artifactId>
+				<version>${modelmapper.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>org.apache.poi</groupId>
+				<artifactId>poi</artifactId>
+				<version>${poi.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>org.apache.poi</groupId>
+				<artifactId>poi-ooxml</artifactId>
+				<version>${poi.version}</version>
+			</dependency>
+
+			<!-- Utilities -->
+			<dependency>
+				<groupId>com.google.guava</groupId>
+				<artifactId>guava</artifactId>
+				<version>${guava.version}</version>
+			</dependency>
+
+			<!-- Logging -->
+			<dependency>
+				<groupId>net.logstash.logback</groupId>
+				<artifactId>logstash-logback-encoder</artifactId>
+				<version>${logstash-logback-encoder.version}</version>
+			</dependency>
+
+			<!-- API Documentation -->
+			<dependency>
+				<groupId>io.swagger.core.v3</groupId>
+				<artifactId>swagger-annotations</artifactId>
+				<version>${swagger-annotations.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>org.springdoc</groupId>
+				<artifactId>springdoc-openapi-starter-webmvc-ui</artifactId>
+				<version>${springdoc-openapi.version}</version>
+			</dependency>
+
+			<!-- Network -->
+			<dependency>
+				<groupId>org.xerial.snappy</groupId>
+				<artifactId>snappy-java</artifactId>
+				<version>${snappy.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>com.squareup.okio</groupId>
+				<artifactId>okio-jvm</artifactId>
+				<version>${okio.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>com.squareup.okhttp3</groupId>
+				<artifactId>okhttp-jvm</artifactId>
+				<version>${okhttp.version}</version>
+			</dependency>
+
+			<!-- Security & Cryptography -->
+			<dependency>
+				<groupId>org.bouncycastle</groupId>
+				<artifactId>bcprov-jdk18on</artifactId>
+				<version>${bouncycastle.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>com.nimbusds</groupId>
+				<artifactId>nimbus-jose-jwt</artifactId>
+				<version>${nimbus-jose-jwt.version}</version>
+			</dependency>
+
+			<!-- IDE annotations -->
+			<dependency>
+				<groupId>org.jetbrains</groupId>
+				<artifactId>annotations</artifactId>
+				<version>${jetbrains-annotations.version}</version>
+			</dependency>
+
+			<!-- Storage -->
+			<dependency>
+				<groupId>io.minio</groupId>
+				<artifactId>minio</artifactId>
+				<version>${minio.version}</version>
+				<exclusions>
+					<exclusion>
+						<groupId>com.squareup.okhttp3</groupId>
+						<artifactId>okhttp</artifactId>
+					</exclusion>
+				</exclusions>
+			</dependency>
+
+			<!-- Spring Cloud BOM -->
+			<dependency>
+				<groupId>org.springframework.cloud</groupId>
+				<artifactId>spring-cloud-dependencies</artifactId>
+				<version>${spring-cloud.version}</version>
+				<type>pom</type>
+				<scope>import</scope>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
+
+	<build>
+		<pluginManagement>
+			<plugins>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-compiler-plugin</artifactId>
+					<configuration>
+						<annotationProcessorPaths>
+							<path>
+								<groupId>org.projectlombok</groupId>
+								<artifactId>lombok</artifactId>
+								<version>${lombok.version}</version>
+							</path>
+							<path>
+								<groupId>org.springframework.boot</groupId>
+								<artifactId>spring-boot-configuration-processor</artifactId>
+							</path>
+						</annotationProcessorPaths>
+					</configuration>
+				</plugin>
+			</plugins>
+		</pluginManagement>
+	</build>
+</project>

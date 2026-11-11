@@ -1,0 +1,17 @@
+{
+    "appTitle": "Core Application",
+    "accessDenied": {
+        "title": "Không có quyền truy cập",
+        "description": "Anh/chị không có quyền truy cập vào trang này."
+    },
+    "welcome": {
+        "title": "Chào mừng",
+        "subtitle": "Core Starter",
+        "description1": "Hệ thống nền tảng dùng chung cho các dự án.",
+        "description2": "Vui lòng chọn nhóm chức năng trên thanh menu bên trái để bắt đầu làm việc."
+    },
+    "defaultPage": {
+        "noComponentTitle": "Chức năng \"{{menuName}}\" hiện chưa có component.",
+        "contactAdmin": "Vui lòng liên hệ quản trị viên để được hỗ trợ."
+    }
+}

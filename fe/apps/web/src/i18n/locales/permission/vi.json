@@ -1,0 +1,138 @@
+{
+    "actions": {
+        "addFunction": "Thêm chức năng",
+        "addApi": "Thêm API"
+    },
+    "title": {
+        "createEmptyModule": "Thêm mới phân hệ",
+        "createEmptyGroup": "Thêm mới nhóm chức năng",
+        "createEmptyMenu": "Thêm mới menu chức năng",
+        "createEmptyPage": "Thêm mới trang chức năng",
+        "detailModule": "Chi tiết phân hệ",
+        "detailGroup": "Chi tiết nhóm chức năng",
+        "detailMenu": "Chi tiết menu chức năng",
+        "detailPage": "Chi tiết trang chức năng"
+    },
+    "fields": {
+        "type": "Loại chức năng",
+        "parentCode": "Chức năng cha",
+        "code": "Mã chức năng",
+        "name": "Tên chức năng",
+        "foreignName": "Tên nước ngoài",
+        "icon": "Biểu tượng",
+        "sortOrder": "Thứ tự hiển thị",
+        "urlSegment": "Đường dẫn",
+        "fullUrl": "Đường dẫn đầy đủ",
+        "method": "Phương thức",
+        "uri": "URI",
+        "pathFolder": "Đường dẫn thư mục",
+        "description": "Mô tả",
+        "status": "Trạng thái"
+    },
+    "typeLabels": {
+        "module": "Phân hệ chức năng",
+        "group": "Nhóm chức năng",
+        "menu": "Menu chức năng",
+        "page": "Trang chức năng"
+    },
+    "buttonTypes": {
+        "export": "Xuất dữ liệu",
+        "view": "Xem",
+        "create": "Tạo mới",
+        "update": "Cập nhật",
+        "delete": "Xóa",
+        "active": "Kích hoạt",
+        "inactive": "Ngừng kích hoạt"
+    },
+    "tables": {
+        "columns": {
+            "buttonAction": "Mã hành động"
+        },
+        "functions": {
+            "title": "Chức năng ({{count}})",
+            "empty": "Không có bản ghi chức năng.",
+            "code": "Mã chức năng",
+            "name": "Tên chức năng"
+        },
+        "apis": {
+            "title": "API ({{count}})",
+            "empty": "Không có bản ghi API.",
+            "code": "Mã API",
+            "name": "Tên API"
+        }
+    },
+    "placeholders": {
+        "name": "Nhập tên",
+        "uri": "Nhập URI"
+    },
+    "dialog": {
+        "createChildTitle": "Chọn loại chức năng cần tạo",
+        "createChildDescription": "Dưới phân hệ hoặc nhóm, anh/chị có thể tạo Nhóm hoặc Menu."
+    },
+    "messages": {
+        "unsupportedType": "Loại không được hỗ trợ.",
+        "confirmDelete": "Anh/chị có chắc muốn xóa \"{{name}}\"?",
+        "confirmDeleteWithChildren": "Xóa \"{{name}}\" sẽ xóa {{count}} mục con bên trong. Anh/chị có chắc muốn xóa?",
+        "selectItemToViewDetail": "Chọn một chức năng để xem chi tiết.",
+        "createSuccess": "Tạo phân quyền thành công!",
+        "createError": "Không thể tạo phân quyền.",
+        "updateSuccess": "Cập nhật phân quyền thành công!",
+        "updateError": "Không thể cập nhật phân quyền.",
+        "deleteSuccess": "Xóa phân quyền thành công!",
+        "deleteError": "Không thể xóa phân quyền.",
+        "formInvalid": "Vui lòng kiểm tra lại thông tin bắt buộc trước khi lưu.",
+        "childRequired": "Vui lòng nhập đầy đủ thông tin bắt buộc cho chức năng và API.",
+        "selectItemDescription": "Vui lòng chọn một mục trong cây danh mục bên trái để xem thông tin chi tiết hoặc chỉnh sửa.",
+        "exportSuccess": "Xuất dữ liệu chức năng thành công",
+        "importSuccess": "Nhập dữ liệu chức năng thành công",
+        "urlSegmentLeadingSlash": "Đường dẫn phải bắt đầu bằng dấu \"/\".",
+        "childSortOrderInvalid": "Thứ tự hiển thị của chức năng và API không được là số âm."
+    },
+    "import": {
+        "previewTitle": "Xem trước thay đổi",
+        "btnExport": "Xuất dữ liệu",
+        "btnImport": "Nhập dữ liệu",
+        "btnPreview": "Xem trước",
+        "btnApply": "Áp dụng",
+        "fileLabel": "Tệp JSON xuất từ môi trường nguồn",
+        "fileRequired": "Vui lòng chọn tệp",
+        "blockersTitle": "Lỗi chặn - không thể áp dụng",
+        "cutTitle": "Phân quyền sẽ bị cắt",
+        "cutDescription": "{{count}} lượt gán quyền của vai trò sẽ bị xóa do chức năng tương ứng không còn trong tệp.",
+        "renameTitle": "Nghi ngờ đổi mã",
+        "uriWarningsTitle": "Chức năng khai API không tồn tại trong hệ thống (vẫn có thể áp dụng)",
+        "applyScopeHint": "Chỉ những nhóm được tích chọn mới được áp dụng. Nhóm không tích sẽ bỏ qua, giữ nguyên như hiện tại.",
+        "summary": {
+            "fileCount": "Trong tệp",
+            "toAdd": "Thêm mới",
+            "toUpdate": "Cập nhật",
+            "toDelete": "Xóa"
+        },
+        "fields": {
+            "name": "Tên",
+            "foreignName": "Tên nước ngoài",
+            "parentCode": "Mã cha",
+            "appCode": "Mã ứng dụng",
+            "moduleCode": "Mã phân hệ",
+            "type": "Loại",
+            "url": "Đường dẫn",
+            "urlSegment": "Đoạn đường dẫn",
+            "pathFolder": "Thư mục",
+            "uri": "URI",
+            "method": "Phương thức",
+            "buttonAction": "Mã hành động",
+            "icon": "Biểu tượng",
+            "sortOrder": "Thứ tự hiển thị",
+            "description": "Mô tả",
+            "status": "Trạng thái"
+        },
+        "emptyValue": "(trống)",
+        "rolesAffected": "Vai trò bị cắt",
+        "noChangesTitle": "Không có thay đổi",
+        "noChangesDescription": "Dữ liệu hiện tại đã khớp hoàn toàn với tệp. Không cần áp dụng.",
+        "confirmTitle": "Xác nhận áp dụng",
+        "confirmDescription": "Hệ thống sẽ thêm {{added}}, cập nhật {{updated}} và xóa {{deleted}} chức năng. Anh/chị có chắc chắn muốn tiếp tục?",
+        "confirmDescriptionWithCut": "Hệ thống sẽ thêm {{added}}, cập nhật {{updated}} và xóa {{deleted}} chức năng, đồng thời cắt {{cut}} lượt gán quyền của vai trò. Thao tác này không thể hoàn tác. Anh/chị có chắc chắn muốn tiếp tục?",
+        "supportFormats": "Chỉ hỗ trợ định dạng JSON (.json) tối đa 10MB"
+    }
+}

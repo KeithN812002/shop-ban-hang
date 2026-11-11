@@ -1,0 +1,378 @@
+{
+    "status": {
+        "entity": {
+            "PENDING": "Pending",
+            "ACTIVE": "Active",
+            "REJECTED": "Rejected",
+            "SUSPENDED": "Suspended"
+        },
+        "product": {
+            "DRAFT": "Draft",
+            "ACTIVE": "On sale",
+            "HIDDEN": "Hidden",
+            "BANNED": "Banned"
+        },
+        "order": {
+            "PENDING": "Pending",
+            "CONFIRMED": "Confirmed",
+            "READY_TO_SHIP": "Ready to ship",
+            "PICKING": "Picking up",
+            "SHIPPING": "Shipping",
+            "DELIVERED": "Delivered",
+            "COMPLETED": "Completed",
+            "CANCELLED": "Cancelled",
+            "RETURNING": "Being returned",
+            "RETURNED": "Returned",
+            "RETURN_REQUESTED": "Return requested",
+            "RETURN_APPROVED": "Return accepted",
+            "RETURN_SHIPPING": "Being sent back",
+            "RETURN_RECEIVED": "Returned goods received",
+            "REFUNDED": "Refunded"
+        },
+        "returnRequest": {
+            "REQUESTED": "Waiting for the shop",
+            "APPROVED": "Accepted",
+            "REJECTED": "Rejected by the shop",
+            "DISPUTED": "Under dispute",
+            "CANCELLED": "Withdrawn",
+            "CLOSED": "Closed"
+        },
+        "active": {
+            "ACTIVE": "Active",
+            "INACTIVE": "Inactive"
+        },
+        "payment": {
+            "UNPAID": "Unpaid",
+            "PAID": "Paid"
+        }
+    },
+    "role": {
+        "BUYER": "Buyer",
+        "SELLER": "Seller",
+        "SHIPPER": "Shipper"
+    },
+    "discountType": {
+        "PERCENT": "Percentage (%)",
+        "FIXED": "Fixed amount"
+    },
+    "actions": {
+        "approve": "Approve",
+        "reject": "Reject",
+        "suspend": "Suspend",
+        "reactivate": "Reactivate",
+        "ban": "Ban product",
+        "unban": "Unban",
+        "lock": "Lock account",
+        "unlock": "Unlock",
+        "cancelOrder": "Cancel order",
+        "confirmReturned": "Confirm returned goods received",
+        "resolveReturn": "Resolve dispute",
+        "markRefunded": "Confirm refunded"
+    },
+    "reason": {
+        "label": "Reason",
+        "rejectReason": "Rejection reason",
+        "banReason": "Ban reason",
+        "cancelReason": "Cancellation reason"
+    },
+    "dashboard": {
+        "title": "Revenue statistics",
+        "dateRange": "Date range",
+        "period": "Period",
+        "retry": "Retry",
+        "groupBy": {
+            "label": "Group by",
+            "DAY": "Day",
+            "MONTH": "Month"
+        },
+        "kpi": {
+            "title": "Overview",
+            "gmv": "Gross merchandise value (GMV)",
+            "platformRevenue": "Platform revenue",
+            "completedOrders": "Completed orders",
+            "cancelledOrders": "Cancelled orders",
+            "newUsers": "New users",
+            "activeStores": "Active stores",
+            "activeShippers": "Active shippers",
+            "pending": "Pending approval",
+            "pendingHint": "Stores / shippers waiting for approval"
+        },
+        "charts": {
+            "revenue": "Revenue over time",
+            "revenueCaption": "Chart of GMV, platform revenue and order count per period",
+            "ordersByStatus": "Orders by status"
+        },
+        "series": {
+            "gmv": "GMV",
+            "platformRevenue": "Platform revenue",
+            "orders": "Orders"
+        },
+        "top": {
+            "stores": "Top stores",
+            "products": "Best-selling products",
+            "categories": "Top categories",
+            "orders": "{{value}} orders",
+            "sold": "{{value}} sold"
+        }
+    },
+    "account": {
+        "fields": {
+            "keyword": "Username / Name / Email / Phone",
+            "role": "Role",
+            "username": "Username",
+            "fullName": "Full name",
+            "contact": "Contact",
+            "roles": "Roles",
+            "orderCount": "Orders",
+            "totalSpent": "Total spent",
+            "store": "Store",
+            "shipper": "Shipper"
+        },
+        "viewStore": "View store",
+        "viewShipper": "View shipper profile",
+        "confirm": {
+            "lockTitle": "Confirm account lock",
+            "lock": "Are you sure you want to lock the account \"{{name}}\"? The user will no longer be able to sign in.",
+            "unlockTitle": "Confirm account unlock",
+            "unlock": "Are you sure you want to unlock the account \"{{name}}\"?"
+        },
+        "messages": {
+            "lockSuccess": "Account locked successfully!",
+            "unlockSuccess": "Account unlocked successfully!"
+        }
+    },
+    "category": {
+        "fields": {
+            "name": "Category name",
+            "slug": "Slug",
+            "icon": "Icon",
+            "sortOrder": "Sort order",
+            "parent": "Parent category",
+            "imageUrl": "Image URL",
+            "imagePreview": "Category image preview"
+        },
+        "errors": {
+            "slugFormat": "Slug may only contain lowercase letters, digits and hyphens (e.g. mens-fashion)."
+        },
+        "confirm": {
+            "delete": "Are you sure you want to delete the category \"{{name}}\"?"
+        },
+        "messages": {
+            "createSuccess": "Category created successfully!",
+            "updateSuccess": "Category updated successfully!",
+            "deleteSuccess": "Category deleted successfully!"
+        }
+    },
+    "store": {
+        "statusTabs": "Filter stores by status",
+        "fields": {
+            "keyword": "Store name / Owner",
+            "name": "Store name",
+            "owner": "Owner",
+            "province": "Province/City",
+            "phone": "Phone number",
+            "address": "Address",
+            "productCount": "Products",
+            "followerCount": "Followers",
+            "rating": "Rating",
+            "description": "Description"
+        },
+        "confirm": {
+            "approveTitle": "Confirm store approval",
+            "approve": "Are you sure you want to approve the store \"{{name}}\"?",
+            "rejectTitle": "Reject store",
+            "reject": "Reject the registration of store \"{{name}}\". Please enter a reason for the owner.",
+            "suspendTitle": "Suspend store",
+            "suspend": "The store \"{{name}}\" will be suspended from selling. Please enter a reason.",
+            "reactivateTitle": "Confirm store reactivation",
+            "reactivate": "Are you sure you want to reactivate the store \"{{name}}\"?"
+        },
+        "messages": {
+            "approveSuccess": "Store approved successfully!",
+            "rejectSuccess": "Store rejected successfully!",
+            "suspendSuccess": "Store suspended successfully!",
+            "reactivateSuccess": "Store reactivated successfully!"
+        }
+    },
+    "shipper": {
+        "statusTabs": "Filter shippers by status",
+        "fields": {
+            "keyword": "Name / Username / Phone",
+            "fullName": "Full name",
+            "username": "Username",
+            "phone": "Phone number",
+            "idNumber": "ID number",
+            "vehicle": "Vehicle",
+            "vehicleType": "Vehicle type",
+            "vehiclePlate": "License plate",
+            "areaProvince": "Service area"
+        },
+        "confirm": {
+            "approveTitle": "Confirm shipper approval",
+            "approve": "Are you sure you want to approve the shipper \"{{name}}\"?",
+            "rejectTitle": "Reject shipper",
+            "reject": "Reject the registration of shipper \"{{name}}\". Please enter a reason.",
+            "suspendTitle": "Suspend shipper",
+            "suspend": "The shipper \"{{name}}\" will no longer be able to accept orders. Please enter a reason.",
+            "reactivateTitle": "Confirm shipper reactivation",
+            "reactivate": "Are you sure you want to reactivate the shipper \"{{name}}\"?"
+        },
+        "messages": {
+            "approveSuccess": "Shipper approved successfully!",
+            "rejectSuccess": "Shipper rejected successfully!",
+            "suspendSuccess": "Shipper suspended successfully!",
+            "reactivateSuccess": "Shipper reactivated successfully!"
+        }
+    },
+    "product": {
+        "fields": {
+            "keyword": "Product name",
+            "store": "Store",
+            "category": "Category",
+            "name": "Product",
+            "price": "Price",
+            "originalPrice": "Original price",
+            "stock": "Stock",
+            "soldCount": "Sold",
+            "viewCount": "Views",
+            "rating": "Rating",
+            "arType": "AR try-on type",
+            "tags": "Tags",
+            "description": "Description",
+            "images": "Product images",
+            "variants": "Variants"
+        },
+        "confirm": {
+            "banTitle": "Ban product",
+            "ban": "The product \"{{name}}\" will be removed from the storefront. Please enter a reason.",
+            "unbanTitle": "Confirm product unban",
+            "unban": "Are you sure you want to unban the product \"{{name}}\"?"
+        },
+        "messages": {
+            "banSuccess": "Product banned successfully!",
+            "unbanSuccess": "Product unbanned successfully!"
+        }
+    },
+    "order": {
+        "fields": {
+            "code": "Order code",
+            "store": "Store",
+            "buyer": "Buyer",
+            "itemCount": "Items",
+            "total": "Total",
+            "paymentStatus": "Payment",
+            "createdRange": "Created date",
+            "receiver": "Receiver",
+            "receiverPhone": "Receiver phone",
+            "shippingAddress": "Shipping address",
+            "shipper": "Shipper",
+            "shipperPhone": "Shipper phone",
+            "note": "Note",
+            "subtotal": "Subtotal",
+            "shippingFee": "Shipping fee",
+            "storeDiscount": "Store discount",
+            "platformDiscount": "Platform discount",
+            "platformFee": "Platform fee",
+            "sellerIncome": "Seller income",
+            "shipperFee": "Shipper earnings"
+        },
+        "items": "Order items",
+        "amounts": "Amounts",
+        "history": "Order history",
+        "noHistory": "No history yet.",
+        "source": {
+            "BUYER": "Buyer",
+            "SELLER": "Seller",
+            "SHIPPER": "Shipper",
+            "ADMIN": "Admin",
+            "SYSTEM": "System"
+        },
+        "confirm": {
+            "cancelTitle": "Cancel order",
+            "cancel": "Order {{name}} will be cancelled and its stock and voucher usage restored. Please enter a reason.",
+            "confirmReturnedTitle": "Confirm returned goods received",
+            "confirmReturned": "Confirm the store got the parcel of order {{name}} back? Stock is restored and the order becomes \"Returned\"."
+        },
+        "messages": {
+            "cancelSuccess": "Order cancelled successfully!",
+            "confirmReturnedSuccess": "Returned goods confirmed!",
+            "resolveReturnSuccess": "Return dispute resolved!",
+            "markRefundedSuccess": "Refund recorded!"
+        },
+        "return": {
+            "section": "Return/refund request",
+            "tabsLabel": "Filter orders by return request",
+            "disputeTab": "Return disputes",
+            "reason": {
+                "DAMAGED": "Item is damaged",
+                "WRONG_ITEM": "Wrong item delivered",
+                "NOT_AS_DESCRIBED": "Not as described",
+                "MISSING_PARTS": "Missing items / accessories",
+                "OTHER": "Other reason"
+            },
+            "fields": {
+                "requestStatus": "Request status",
+                "refundAmount": "Refund amount",
+                "reason": "Reason for return",
+                "requestedAt": "Requested at",
+                "description": "Details",
+                "photos": "Photo evidence",
+                "bankName": "Bank",
+                "bankAccountNo": "Account number",
+                "bankAccountName": "Account holder",
+                "sellerNote": "Shop's response",
+                "disputeReason": "Dispute details",
+                "disputedAt": "Disputed at",
+                "adminNote": "Admin's note",
+                "refundedAt": "Refunded at",
+                "refundNote": "Refund note",
+                "refundProof": "Refund receipt"
+            },
+            "resolve": {
+                "title": "Resolve return dispute",
+                "description": "Decide the buyer's dispute for order {{name}}. Accept: the shop must take the goods back and refund; reject: the order is completed.",
+                "note": "Note",
+                "approve": "Accept the return",
+                "reject": "Reject the dispute"
+            },
+            "refund": {
+                "title": "Confirm refund",
+                "description": "Record that the refund was transferred to the buyer of order {{name}}.",
+                "proofUrl": "Receipt image link (optional)",
+                "proofUrlInvalid": "Invalid image link.",
+                "note": "Note (optional)"
+            }
+        }
+    },
+    "voucher": {
+        "fields": {
+            "keyword": "Voucher code / name",
+            "code": "Voucher code",
+            "name": "Voucher name",
+            "discount": "Discount",
+            "discountType": "Discount type",
+            "discountValue": "Discount value",
+            "maxDiscount": "Maximum discount",
+            "minOrderValue": "Minimum order value",
+            "usage": "Used / Limit",
+            "usageLimit": "Total usage limit",
+            "perUserLimit": "Usage limit per user",
+            "startAt": "Starts at",
+            "endAt": "Ends at"
+        },
+        "errors": {
+            "codeFormat": "Voucher code may only contain letters, digits, hyphens and underscores.",
+            "discountPositive": "Discount value must be greater than 0.",
+            "percentMax": "A percentage discount cannot exceed {{max}}%.",
+            "endAfterStart": "The end time must be after the start time."
+        },
+        "confirm": {
+            "delete": "Are you sure you want to delete the voucher \"{{name}}\"?"
+        },
+        "messages": {
+            "createSuccess": "Voucher created successfully!",
+            "updateSuccess": "Voucher updated successfully!",
+            "deleteSuccess": "Voucher deleted successfully!"
+        }
+    }
+}

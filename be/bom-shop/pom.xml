@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>com.fpt</groupId>
+        <artifactId>core-parent</artifactId>
+        <version>0.0.1-SNAPSHOT</version>
+    </parent>
+
+    <artifactId>bom-shop</artifactId>
+    <packaging>jar</packaging>
+    <name>bom-shop</name>
+    <description>Business Object Model for the e-commerce shop</description>
+
+    <dependencies>
+        <!-- Core Modules -->
+        <dependency>
+            <groupId>com.fpt</groupId>
+            <artifactId>core-common</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>com.fpt</groupId>
+            <artifactId>core-cache</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>com.fpt</groupId>
+            <artifactId>core-persistence</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>com.fpt</groupId>
+            <artifactId>core-keycloak</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>com.fpt</groupId>
+            <artifactId>core-security</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>com.fpt</groupId>
+            <artifactId>core-storage</artifactId>
+        </dependency>
+
+        <!-- System administration (sa_user, ExternalUser) -->
+        <dependency>
+            <groupId>com.fpt</groupId>
+            <artifactId>bom-sa</artifactId>
+        </dependency>
+
+        <!-- Spring Boot Starters -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-security</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-webmvc</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-jpa</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-validation</artifactId>
+        </dependency>
+
+        <!-- Lombok -->
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <optional>true</optional>
+        </dependency>
+
+        <!-- ModelMapper -->
+        <dependency>
+            <groupId>org.modelmapper</groupId>
+            <artifactId>modelmapper</artifactId>
+        </dependency>
+
+        <!-- Jackson annotations (Jackson 3 keeps the com.fasterxml.jackson.annotation package) -->
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-annotations</artifactId>
+        </dependency>
+
+        <!-- Tests -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
+</project>

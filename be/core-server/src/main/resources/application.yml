@@ -1,0 +1,34 @@
+spring:
+  web:
+    locale: vi
+    locale-resolver: accept_header
+  data:
+    web:
+      pageable:
+        max-page-size: 9999999
+  application:
+    name: core-app
+  cloud:
+    consul:
+      host: 127.0.0.1
+      port: 8500
+      config:
+        enabled: true
+        format: YAML
+        data-key: data
+      discovery:
+        preferIpAddress: true
+
+springdoc.show-actuator: true
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: info,health
+  info:
+    git:
+      enabled: true
+      mode: full
+    build:
+      enabled: true

@@ -1,0 +1,42 @@
+{
+    "fields": {
+        "eventType": "Loại sự kiện",
+        "receiver": "Email người nhận",
+        "subject": "Tiêu đề",
+        "status": "Trạng thái",
+        "retryCount": "Số lần gửi lại",
+        "sentAt": "Thời gian gửi",
+        "body": "Nội dung",
+        "variables": "Tham số",
+        "variableKey": "Tham số",
+        "variableValue": "Giá trị",
+        "errorMessage": "Thông báo lỗi"
+    },
+    "status": {
+        "new": "Mới",
+        "pending": "Chờ gửi",
+        "processing": "Đang gửi",
+        "success": "Gửi thành công",
+        "fail": "Gửi thất bại",
+        "cancelled": "Đã hủy"
+    },
+    "eventType": {
+        "RESET_PASSWORD": "Khôi phục mật khẩu",
+        "CREATE_USER": "Thông báo tạo tài khoản",
+        "OTP_CHANGE_PASSWORD": "Thông báo mã OTP đổi mật khẩu",
+        "UPDATE_USER": "Thông báo cập nhật tài khoản"
+    },
+    "actions": {
+        "resend": "Gửi lại email",
+        "resendBulk": "Gửi lại email hàng loạt"
+    },
+    "messages": {
+        "resendSuccess": "Yêu cầu gửi lại email thành công",
+        "resendError": "Gửi lại email thất bại",
+        "resendOnlyFailedOrCancelled": "Chỉ cho phép gửi lại email ở trạng thái Gửi thất bại hoặc Đã hủy",
+        "confirmResendTitle": "Xác nhận gửi lại",
+        "confirmResendDescription": "Anh/chị có chắc chắn muốn gửi lại email này không?",
+        "confirmResendBulkTitle": "Xác nhận gửi lại hàng loạt",
+        "confirmResendBulkDescription": "Anh/chị có chắc chắn muốn gửi lại các email đã chọn không?"
+    }
+}

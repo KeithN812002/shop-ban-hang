@@ -1,0 +1,14 @@
+{
+    "extends": "@workspace/typescript-config/react-library.json",
+    "compilerOptions": {
+        "declaration": false,
+        "declarationMap": false,
+        "noEmit": true,
+        "paths": {
+            "@/*": ["./src/*"],
+            "@workspace/ui/*": ["../../packages/ui/src/*"]
+        }
+    },
+    "include": ["src/**/*.ts", "src/**/*.tsx"],
+    "exclude": ["node_modules"]
+}

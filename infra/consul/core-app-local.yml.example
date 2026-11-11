@@ -1,0 +1,95 @@
+# Consul KV template for key  config/core-app,local/data
+# Rendered by infra/scripts/load-consul-config.(ps1|sh): each dollar-brace placeholder is replaced with the
+# variable of the same name from infra/.env.
+# Placeholders only - never put real values in this file. Values are written inside double quotes.
+
+server:
+  port: 8200
+
+spring:
+  servlet:
+    multipart:                   # product/review/proof images are up to 5MB (default limit is 1MB)
+      max-file-size: 6MB
+      max-request-size: 6MB
+  datasource:
+    url: "jdbc:postgresql://localhost:5432/${POSTGRES_DB}"
+    username: "${POSTGRES_USER}"
+    password: "${POSTGRES_PASSWORD}"
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          # The backend fetches this issuer's metadata at startup: Keycloak must be up and realm `shop` imported.
+          issuer-uri: "http://localhost:8080/realms/shop"
+
+redis:
+  active-cluster: false
+  host: localhost
+  port: 6379
+  client-secret: ""              # compose Redis has no password; the key must be present
+  default-expire: "60"
+  default-time-unit: SECONDS
+  config:
+    nodes: [ "localhost:6379" ]  # validated @NotEmpty even in standalone mode
+
+keycloak:
+  auth-server-url: "http://localhost:8080"
+  realm: shop
+  resource:
+    app: shop-app
+  credentials:
+    secret: "${KEYCLOAK_CLIENT_SECRET}"
+  admin-token-scope: kc-admin-api  # Keycloak 26.8+: adds the Admin REST API audience to the service-account token
+
+minio:
+  host-url: "http://localhost:9000"
+  access-name: "${MINIO_ROOT_USER}"
+  access-secret: "${MINIO_ROOT_PASSWORD}"
+
+app:
+  app-name: "Shop Ban Hang"
+  login-url: "http://localhost:8088"
+  email:
+    crypto:
+      key: "${APP_CRYPTO_KEY}"   # AES key: 16, 24 or 32 ASCII characters
+  otp:
+    change-password-expire-minutes: 5
+    change-password-cooldown-minutes: 1
+
+security:
+  white-list:                    # paths reachable without a token
+    - /sa/auth/exchange-auth-code
+    - /sa/auth/refresh-token
+    - /swagger-ui/**
+    - /v3/api-docs/**
+    - /actuator/health
+    - /shop/public/**
+  skip-all-permissions: false
+
+app.logging:
+  use-json-format: false
+  logstash:
+    enabled: false
+
+# Shop keys (docs/shop-contract.md section 8)
+shop:
+  ai:
+    anthropic-api-key: "${ANTHROPIC_API_KEY}"   # empty = rule-based fallback only
+    model: claude-sonnet-5-5
+    rate-limit-per-minute: 10
+  order:
+    shipping-fee: 30000
+    free-ship-threshold: 500000
+    platform-fee-percent: 5
+    shipper-fee-percent: 80
+    auto-complete-days: 7
+    return-window-days: 7          # buyer may request a return this many days after delivery
+    return-response-days: 3        # seller has this long to answer a return request (then auto-approved)
+    return-dispute-days: 3         # buyer has this long to dispute a rejected return (then the order completes)
+  storage:
+    bucket: shop
+  public-file-base: /shop/public/file/
+  cors:
+    allowed-origins:             # admin web and storefront call the backend from other origins
+      - http://localhost:8088
+      - http://localhost:3000

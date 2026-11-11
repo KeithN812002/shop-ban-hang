@@ -1,0 +1,157 @@
+{
+    "shipper": {
+        "nav": {
+            "label": "Shipper navigation",
+            "available": "Available",
+            "orders": "My orders",
+            "earnings": "Earnings",
+            "profile": "Profile"
+        },
+        "common": {
+            "refresh": "Refresh"
+        },
+        "card": {
+            "open": "Open order {{code}}",
+            "store": "Store",
+            "cod": "COD",
+            "fee": "Ship fee",
+            "attempts": "Failed deliveries {{count}}/{{max}}",
+            "deliver": "Deliver",
+            "returnBadge": "Return pickup",
+            "returnPickupFrom": "Pick up from the buyer",
+            "returnDropoff": "Drop off at the shop"
+        },
+        "stepper": {
+            "label": "Delivery progress",
+            "accepted": "Accepted",
+            "pickedUp": "Picked up",
+            "shipping": "Delivering",
+            "delivered": "Delivered",
+            "completed": "Completed",
+            "returning": "Returning",
+            "returned": "Back at shop",
+            "returnAccepted": "Accepted",
+            "returnShipping": "Sending back",
+            "returnReceived": "Shop received"
+        },
+        "available": {
+            "title": "Available orders",
+            "province": "Area",
+            "ownArea": "My area ({{province}})",
+            "ownAreaShort": "My area",
+            "empty": "No orders are waiting for pickup right now.",
+            "emptyHint": "The list refreshes every 30 seconds, or use the refresh button.",
+            "accept": "Accept order",
+            "accepted": "Order accepted. Head to the store to pick it up!",
+            "returnAccepted": "Return job accepted. Head to the buyer to pick it up!",
+            "alreadyTaken": "Another shipper already took this order. The list has been refreshed.",
+            "activeBanner": "You have {{count}} orders to handle",
+            "activeBannerAction": "View",
+            "type": "Job type",
+            "types": {
+                "ALL": "All",
+                "DELIVERY": "Deliveries",
+                "RETURN": "Return pickups"
+            }
+        },
+        "orders": {
+            "title": "My orders",
+            "tabs": "Filter by status",
+            "tab": {
+                "PICKING": "Picking up",
+                "SHIPPING": "Delivering",
+                "RETURNING": "Returning",
+                "DELIVERED": "Delivered",
+                "RETURNED": "Returned",
+                "RETURN_SHIPPING": "Sending back"
+            },
+            "empty": {
+                "PICKING": "You have no orders to pick up.",
+                "SHIPPING": "You have no orders in delivery.",
+                "RETURNING": "You have no orders being returned to the shop.",
+                "DELIVERED": "You have not delivered any order yet.",
+                "RETURNED": "No orders returned to the shop.",
+                "RETURN_SHIPPING": "You have no parcels being sent back to a shop."
+            }
+        },
+        "detail": {
+            "title": "Order details",
+            "collect": "Cash to collect (COD)",
+            "shippingFee": "Shipping fee",
+            "pickedUp": "Picked up",
+            "pickedUpDone": "Pickup confirmed. Start delivering!",
+            "delivered": "Delivered",
+            "deliveredDone": "Delivery confirmed.",
+            "failed": "Delivery failed",
+            "pickup": "Pickup point",
+            "delivery": "Delivery point",
+            "call": "Call",
+            "directions": "Directions",
+            "note": "Buyer note: {{note}}",
+            "items": "Items",
+            "proof": "Delivery proof",
+            "returningHint": "Bring the parcel back to the shop; the shop will confirm once it is received.",
+            "returnShippingHint": "Bring the parcel to the shop; the shop will confirm once it is received",
+            "returnPickup": "Pick up from the buyer",
+            "returnDropoff": "Drop off at the shop"
+        },
+        "deliver": {
+            "title": "Confirm delivery",
+            "confirm": "Confirm delivered",
+            "collect": "Remember to collect {{amount}} from the customer.",
+            "proofHint": "Take a photo of the delivered parcel (or the recipient) as proof of delivery.",
+            "proofAlt": "Delivery proof photo",
+            "noPhoto": "No photo yet",
+            "take": "Take photo",
+            "retake": "Retake"
+        },
+        "failed": {
+            "title": "Report failed delivery",
+            "confirm": "Confirm failure",
+            "reason": "Reason",
+            "reasons": {
+                "RECEIVER_ABSENT": "Recipient not at home",
+                "WRONG_ADDRESS": "Wrong address",
+                "REFUSED": "Recipient refused the parcel",
+                "PHONE_UNREACHABLE": "Cannot reach the recipient",
+                "OTHER": "Other reason"
+            },
+            "note": "Note",
+            "noteRequired": "Describe the other reason.",
+            "recorded": "Failed attempt recorded.",
+            "returned": "Recorded. Bring the parcel back to the shop.",
+            "lastAttemptWarning": "This is failed attempt #{{max}}: the order will be returned to the store."
+        },
+        "earnings": {
+            "title": "Earnings",
+            "earnings": "Earnings",
+            "cod": "COD collected",
+            "delivered": "Delivered",
+            "failed": "Failed",
+            "returned": "Returned",
+            "chart": "Earnings over time",
+            "noData": "No data in this period.",
+            "chartTooltip": "{{period}}: {{earnings}} ({{deliveries}} deliveries)"
+        },
+        "profile": {
+            "title": "Profile",
+            "info": "Shipper information",
+            "reason": "Reason: {{reason}}",
+            "status": {
+                "PENDING": "Pending approval",
+                "ACTIVE": "Active",
+                "REJECTED": "Rejected",
+                "SUSPENDED": "Suspended"
+            },
+            "fields": {
+                "fullName": "Full name",
+                "username": "Account",
+                "phone": "Phone number",
+                "idNumber": "ID number",
+                "vehicleType": "Vehicle type",
+                "vehiclePlate": "Plate number",
+                "areaProvince": "Service area"
+            }
+        }
+    }
+}

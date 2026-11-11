@@ -1,0 +1,62 @@
+{
+    "fields": {
+        "userName": "Account",
+        "personalName": "User Name",
+        "role": "Role",
+        "assignRoles": "Assign Roles",
+        "isInternal": "Account Type",
+        "authorizationStatus": "Authorization Status",
+        "unassignedRole": "Unassigned",
+        "assignedRole": "Assigned",
+        "externalUnitCode": "Organization code"
+    },
+    "isInternal": {
+        "true": "Internal",
+        "false": "External"
+    },
+    "actions": {
+        "assignRoles": "Assign Roles",
+        "saveData": "Save Data",
+        "resetPassword": "Reset Password",
+        "resetPasswordBulk": "Reset Password",
+        "activeBulk": "Activate",
+        "inactiveBulk": "Deactivate",
+        "deleteBulk": "Delete"
+    },
+    "errors": {
+        "roleRequired": "Please select at least one role for the user.",
+        "userNameFormat": "Username may only contain unaccented letters, digits and . _ - (no spaces, cannot start or end with a special character)."
+    },
+    "messages": {
+        "confirmActive": "Are you sure you want to activate user \"{{name}}\"?",
+        "confirmActiveTitle": "Confirm Activation",
+        "confirmInactiveTitle": "Confirm Deactivation",
+        "confirmInactive": "Are you sure you want to stop activity for user \"{{name}}\"?",
+        "confirmDelete": "Are you sure you want to delete user \"{{name}}\"?",
+        "confirmResetPassword": "Are you sure you want to reset password for user \"{{name}}\"?",
+        "confirmResetPasswordTitle": "Confirm Reset Password",
+        "confirmResetPasswordBulk": "Are you sure you want to reset password in bulk for {{count}} selected users?",
+        "confirmResetPasswordBulkTitle": "Confirm Reset Password Bulk",
+        "confirmActiveBulk": "Are you sure you want to activate {{count}} selected users?",
+        "confirmActiveBulkTitle": "Confirm Bulk Activation",
+        "confirmInactiveBulk": "Are you sure you want to deactivate {{count}} selected users?",
+        "confirmInactiveBulkTitle": "Confirm Bulk Deactivation",
+        "confirmDeleteBulk": "Are you sure you want to delete {{count}} selected users?",
+        "confirmDeleteBulkTitle": "Confirm Bulk Deletion",
+        "activeBulkSuccess": "Bulk activation successful!",
+        "inactiveBulkSuccess": "Bulk deactivation successful!",
+        "deleteBulkSuccess": "Bulk deletion successful!",
+        "resetPasswordSuccess": "Reset password successfully!",
+        "resetPasswordBulkSuccess": "Reset password in bulk successfully!",
+        "createSuccess": "User created successfully!",
+        "createError": "Failed to create user.",
+        "updateSuccess": "User updated successfully!",
+        "updateError": "Failed to update user.",
+        "deleteSuccess": "User deleted successfully!",
+        "deleteError": "Failed to delete user.",
+        "activeSuccess": "User activated successfully!",
+        "activeError": "Failed to activate user.",
+        "inactiveSuccess": "User deactivated successfully!",
+        "inactiveError": "Failed to deactivate user."
+    }
+}

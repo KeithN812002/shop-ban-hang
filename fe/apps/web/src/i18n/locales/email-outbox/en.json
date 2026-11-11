@@ -1,0 +1,42 @@
+{
+    "fields": {
+        "eventType": "Event Type",
+        "receiver": "Receiver email",
+        "subject": "Subject",
+        "status": "Status",
+        "retryCount": "Retry Count",
+        "sentAt": "Sent At",
+        "body": "Body",
+        "variables": "Variables",
+        "variableKey": "Parameter",
+        "variableValue": "Value",
+        "errorMessage": "Error Message"
+    },
+    "status": {
+        "new": "New",
+        "pending": "Pending",
+        "processing": "Processing",
+        "success": "Success",
+        "fail": "Fail",
+        "cancelled": "Cancelled"
+    },
+    "eventType": {
+        "RESET_PASSWORD": "Reset Password",
+        "CREATE_USER": "Create Account Notification",
+        "OTP_CHANGE_PASSWORD": "OTP Change Password Notification",
+        "UPDATE_USER": "Update Account Notification"
+    },
+    "actions": {
+        "resend": "Resend email",
+        "resendBulk": "Resend emails in bulk"
+    },
+    "messages": {
+        "resendSuccess": "Email resent successfully",
+        "resendError": "Failed to resend email",
+        "resendOnlyFailedOrCancelled": "Only failed or cancelled emails can be resent",
+        "confirmResendTitle": "Confirm Resend",
+        "confirmResendDescription": "Are you sure you want to resend this email?",
+        "confirmResendBulkTitle": "Confirm Bulk Resend",
+        "confirmResendBulkDescription": "Are you sure you want to resend the selected emails?"
+    }
+}

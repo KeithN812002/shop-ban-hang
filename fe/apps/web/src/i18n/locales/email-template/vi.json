@@ -1,0 +1,34 @@
+{
+    "fields": {
+        "eventType": "Loại sự kiện",
+        "subjectTemplate": "Tiêu đề mẫu",
+        "bodyTemplate": "Nội dung mẫu",
+        "variables": "Các biến hỗ trợ",
+        "variablesHint": "Click vào biến để sao chép nhanh"
+    },
+    "messages": {
+        "updateSuccess": "Cập nhật email template thành công",
+        "confirmActiveTitle": "Xác nhận kích hoạt",
+        "confirmActive": "Anh/chị có chắc chắn muốn kích hoạt email template \"{{name}}\" này không?",
+        "confirmInactiveTitle": "Xác nhận dừng hoạt động",
+        "confirmInactive": "Anh/chị có chắc chắn muốn dừng hoạt động email template \"{{name}}\" này không?",
+        "activeSuccess": "Kích hoạt email template thành công!",
+        "inactiveSuccess": "Dừng hoạt động email template thành công!",
+        "subjectRequired": "Tiêu đề mẫu không được để trống",
+        "bodyRequired": "Nội dung mẫu không được để trống",
+        "unsupportedVariables": "Các biến sau không được hỗ trợ trong sự kiện này: {{vars}}",
+        "copied": "Đã sao chép biến {{token}} vào clipboard",
+        "copyFailed": "Sao chép thất bại",
+        "clickToCopy": "Click để sao chép",
+        "confirmActiveBulkTitle": "Xác nhận kích hoạt hàng loạt",
+        "confirmActiveBulk": "Anh/chị có chắc chắn muốn kích hoạt {{count}} mẫu email đã chọn không?",
+        "confirmInactiveBulkTitle": "Xác nhận dừng hoạt động hàng loạt",
+        "confirmInactiveBulk": "Anh/chị có chắc chắn muốn dừng hoạt động {{count}} mẫu email đã chọn không?",
+        "activeBulkSuccess": "Kích hoạt hàng loạt thành công!",
+        "inactiveBulkSuccess": "Dừng hoạt động hàng loạt thành công!"
+    },
+    "actions": {
+        "activeBulk": "Kích hoạt",
+        "inactiveBulk": "Dừng hoạt động"
+    }
+}

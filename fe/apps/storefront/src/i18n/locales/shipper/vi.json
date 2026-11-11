@@ -1,0 +1,157 @@
+{
+    "shipper": {
+        "nav": {
+            "label": "Điều hướng shipper",
+            "available": "Đơn chờ lấy",
+            "orders": "Đơn của tôi",
+            "earnings": "Thu nhập",
+            "profile": "Cá nhân"
+        },
+        "common": {
+            "refresh": "Làm mới"
+        },
+        "card": {
+            "open": "Mở đơn hàng {{code}}",
+            "store": "Cửa hàng",
+            "cod": "Thu hộ",
+            "fee": "Phí ship",
+            "attempts": "Giao thất bại {{count}}/{{max}} lần",
+            "deliver": "Giao hàng",
+            "returnBadge": "Lấy hàng trả",
+            "returnPickupFrom": "Lấy hàng tại người mua",
+            "returnDropoff": "Giao trả về shop"
+        },
+        "stepper": {
+            "label": "Tiến trình giao hàng",
+            "accepted": "Nhận đơn",
+            "pickedUp": "Đã lấy hàng",
+            "shipping": "Đang giao",
+            "delivered": "Đã giao",
+            "completed": "Hoàn tất",
+            "returning": "Đang hoàn hàng",
+            "returned": "Đã hoàn về shop",
+            "returnAccepted": "Nhận đơn",
+            "returnShipping": "Đang gửi trả",
+            "returnReceived": "Shop nhận hàng"
+        },
+        "available": {
+            "title": "Đơn chờ lấy",
+            "province": "Khu vực",
+            "ownArea": "Khu vực của tôi ({{province}})",
+            "ownAreaShort": "Khu vực của tôi",
+            "empty": "Hiện chưa có đơn nào chờ lấy.",
+            "emptyHint": "Danh sách tự làm mới mỗi 30 giây, hoặc bấm nút làm mới.",
+            "accept": "Nhận đơn",
+            "accepted": "Đã nhận đơn. Hãy đến cửa hàng lấy hàng!",
+            "returnAccepted": "Đã nhận đơn lấy hàng trả. Hãy đến lấy hàng tại người mua!",
+            "alreadyTaken": "Đơn này đã được shipper khác nhận. Danh sách đã được làm mới.",
+            "activeBanner": "Bạn đang có {{count}} đơn cần xử lý",
+            "activeBannerAction": "Xem",
+            "type": "Loại đơn",
+            "types": {
+                "ALL": "Tất cả",
+                "DELIVERY": "Giao hàng",
+                "RETURN": "Lấy hàng trả"
+            }
+        },
+        "orders": {
+            "title": "Đơn của tôi",
+            "tabs": "Lọc theo trạng thái",
+            "tab": {
+                "PICKING": "Đang lấy",
+                "SHIPPING": "Đang giao",
+                "RETURNING": "Đang hoàn",
+                "DELIVERED": "Đã giao",
+                "RETURNED": "Đã hoàn",
+                "RETURN_SHIPPING": "Đang gửi trả"
+            },
+            "empty": {
+                "PICKING": "Bạn chưa có đơn nào đang lấy hàng.",
+                "SHIPPING": "Bạn chưa có đơn nào đang giao.",
+                "RETURNING": "Bạn không có đơn nào đang hoàn về shop.",
+                "DELIVERED": "Bạn chưa giao thành công đơn nào.",
+                "RETURNED": "Không có đơn đã hoàn về shop.",
+                "RETURN_SHIPPING": "Bạn không có đơn nào đang gửi trả về shop."
+            }
+        },
+        "detail": {
+            "title": "Chi tiết đơn",
+            "collect": "Tiền cần thu (COD)",
+            "shippingFee": "Phí vận chuyển",
+            "pickedUp": "Đã lấy hàng",
+            "pickedUpDone": "Đã xác nhận lấy hàng. Bắt đầu giao!",
+            "delivered": "Đã giao",
+            "deliveredDone": "Đã xác nhận giao hàng thành công.",
+            "failed": "Giao thất bại",
+            "pickup": "Điểm lấy hàng",
+            "delivery": "Điểm giao hàng",
+            "call": "Gọi",
+            "directions": "Chỉ đường",
+            "note": "Ghi chú của khách: {{note}}",
+            "items": "Hàng hóa",
+            "proof": "Ảnh giao hàng",
+            "returningHint": "Mang hàng hoàn về shop; shop sẽ xác nhận khi nhận lại.",
+            "returnShippingHint": "Mang hàng về shop; shop sẽ xác nhận khi nhận",
+            "returnPickup": "Lấy hàng tại người mua",
+            "returnDropoff": "Giao trả về shop"
+        },
+        "deliver": {
+            "title": "Xác nhận giao hàng",
+            "confirm": "Xác nhận đã giao",
+            "collect": "Nhớ thu {{amount}} từ khách hàng.",
+            "proofHint": "Chụp ảnh hàng đã giao (hoặc người nhận) làm bằng chứng giao hàng.",
+            "proofAlt": "Ảnh bằng chứng giao hàng",
+            "noPhoto": "Chưa có ảnh",
+            "take": "Chụp ảnh",
+            "retake": "Chụp lại"
+        },
+        "failed": {
+            "title": "Báo giao thất bại",
+            "confirm": "Xác nhận thất bại",
+            "reason": "Lý do",
+            "reasons": {
+                "RECEIVER_ABSENT": "Khách không có nhà",
+                "WRONG_ADDRESS": "Sai địa chỉ",
+                "REFUSED": "Khách từ chối nhận hàng",
+                "PHONE_UNREACHABLE": "Không liên lạc được",
+                "OTHER": "Lý do khác"
+            },
+            "note": "Ghi chú",
+            "noteRequired": "Vui lòng mô tả lý do khác.",
+            "recorded": "Đã ghi nhận lần giao thất bại.",
+            "returned": "Đã ghi nhận. Hãy mang hàng hoàn về shop.",
+            "lastAttemptWarning": "Đây là lần thất bại thứ {{max}}: đơn hàng sẽ được chuyển sang hoàn trả về cửa hàng."
+        },
+        "earnings": {
+            "title": "Thu nhập",
+            "earnings": "Thu nhập",
+            "cod": "Đã thu hộ (COD)",
+            "delivered": "Đã giao",
+            "failed": "Giao thất bại",
+            "returned": "Hoàn trả",
+            "chart": "Thu nhập theo thời gian",
+            "noData": "Chưa có dữ liệu trong khoảng thời gian này.",
+            "chartTooltip": "{{period}}: {{earnings}} ({{deliveries}} đơn)"
+        },
+        "profile": {
+            "title": "Cá nhân",
+            "info": "Thông tin shipper",
+            "reason": "Lý do: {{reason}}",
+            "status": {
+                "PENDING": "Chờ duyệt",
+                "ACTIVE": "Đang hoạt động",
+                "REJECTED": "Bị từ chối",
+                "SUSPENDED": "Tạm khóa"
+            },
+            "fields": {
+                "fullName": "Họ và tên",
+                "username": "Tài khoản",
+                "phone": "Số điện thoại",
+                "idNumber": "Số CCCD/CMND",
+                "vehicleType": "Loại phương tiện",
+                "vehiclePlate": "Biển số xe",
+                "areaProvince": "Khu vực hoạt động"
+            }
+        }
+    }
+}

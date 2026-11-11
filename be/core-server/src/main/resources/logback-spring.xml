@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+    <include resource="org/springframework/boot/logging/logback/defaults.xml"/>
+    <property resource="application.yml"/>
+
+    <!-- ======================================================  -->
+    <!-- Log directory: có thể override qua environment variable LOG_DIR hoặc system property logging.fileMetadata.path -->
+    <!-- Mặc định: ./app_log và ./app_log_debug (relative path - cùng thư mục với jar fileMetadata) -->
+    <!-- NSSM: Set environment variable LOG_DIR=D:\TKDT-APP\logs\tkdt-niengiam -->
+    <!-- Thứ tự ưu tiên: LOG_DIR > logging.fileMetadata.path > ./ (mặc định) -->
+    <property name="LOG_BASE_DIR" value="${LOG_DIR:-${logging.file.path:-./}}"/>
+    <property name="HOME_LOG" value="${LOG_BASE_DIR}/app_log"/>
+    <property name="HOME_LOG_DEBUG" value="${LOG_BASE_DIR}/app_log_debug"/>
+    <springProperty scope="context" name="APP_NAME" source="spring.application.name" defaultValue="no-name"/>
+    <!-- ====================================================== -->
+
+    <!-- UserConverter không còn được sử dụng vì user được lấy từ MDC -->
+    <!-- <conversionRule conversionWord="username" class="logback.config.com.fpt.core.server.UserConverter"/> -->
+
+    <appender name="ConsoleAppender" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <!-- Format đồng nhất với fileMetadata log: timestamp [level] [thread] user logger location - message exceptionClass:exceptionMessage stackTrace -->
+            <pattern>%d{yyyy-MM-dd HH:mm:ss.SSSZ, GMT+7} %highlight[%-5level] [%thread] %X{user} %logger %C{36}.%M\(%F:%L\)- %msg%n%rEx</pattern>
+        </encoder>
+    </appender>
+
+    <appender name="JSON_FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <!-- phai bo cai nay moi dung dc voi fileBeat -->
+        <!-- fileMetadata>${HOME_LOG}/${APP_NAME}.log</fileMetadata> -->
+        <rollingPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedRollingPolicy">
+            <!--  <fileNamePattern>logback/request.%d{yyyy-MM-dd}.log</fileNamePattern> -->
+            <!-- <fileNamePattern>${HOME_LOG}/${APP_NAME}.%d{yyyy-MM-dd_hhmm}_%i.log</fileNamePattern> -->
+            <fileNamePattern>${HOME_LOG}/${APP_NAME}.%d{yyyy-MM-dd}_%i.log</fileNamePattern>
+            <!-- dung lượng tối đa 1 fileMetadata là 10MB, quá sẽ bị tách ra -->
+            <maxFileSize>10MB</maxFileSize>
+            <!-- fileMetadata lưu tối đa 30 ngày, quá 30 ngày sẽ tự động xóa-->
+            <maxHistory>30</maxHistory>
+            <!-- tổng khối log fileMetadata cực đại là 2GB, nếu quá thì fileMetadata cũ sẽ bị xóa -->
+            <totalSizeCap>2GB</totalSizeCap>
+        </rollingPolicy>
+        <encoder class="net.logstash.logback.encoder.LoggingEventCompositeJsonEncoder">
+            <providers>
+                <!-- Timestamp cho Kibana - ISO8601 format (Kibana tự động nhận diện @timestamp) -->
+                <timestamp>
+                    <fieldName>@timestamp</fieldName>
+                    <pattern>yyyy-MM-dd'T'HH:mm:ss.SSSZ</pattern>
+                    <timeZone>UTC</timeZone>
+                </timestamp>
+                <version/>
+                <!-- Log level -->
+                <logLevel>
+                    <fieldName>level</fieldName>
+                </logLevel>
+                <!-- Logger name -->
+                <loggerName>
+                    <fieldName>logger</fieldName>
+                </loggerName>
+                <!-- Thread name -->
+                <threadName>
+                    <fieldName>thread</fieldName>
+                </threadName>
+                <!-- Message -->
+                <message>
+                    <fieldName>message</fieldName>
+                </message>
+                <!-- Pattern với các fields tùy chỉnh bổ sung -->
+                <pattern>
+                    <omitEmptyFields>true</omitEmptyFields>
+                    <pattern>
+                        {
+                        "time": "%d{yyyy-MM-dd HH:mm:ss.SSSZ, UTC}",
+                        "class_": "%logger{36}",
+                        "class": "%logger{36}",
+                        "method": "%method",
+                        "file": "%file",
+                        "line": "%line",
+                        "location": "%C{36}.%M",
+                        "appName": "${APP_NAME}",
+                        "log_source": "spring-boot"
+                        }
+                    </pattern>
+                </pattern>
+                <!-- MDC fields - traceId, user, method_name, duration_ms -->
+                <mdc>
+                    <includeMdcKeyName>traceId</includeMdcKeyName>
+                    <includeMdcKeyName>user</includeMdcKeyName>
+                    <includeMdcKeyName>method_name</includeMdcKeyName>
+                    <includeMdcKeyName>duration_ms</includeMdcKeyName>
+                    <includeMdcKeyName>clientSystem</includeMdcKeyName>
+                    <includeMdcKeyName>apiKeyMask</includeMdcKeyName>
+                </mdc>
+                <!-- Arguments -->
+                <arguments/>
+                <!-- Exception information -->
+                <stackTrace>
+                    <fieldName>stackTrace</fieldName>
+                    <throwableConverter
+                            class="net.logstash.logback.stacktrace.ShortenedThrowableConverter">
+                        <rootCauseFirst>true</rootCauseFirst>
+                        <maxDepthPerThrowable>30</maxDepthPerThrowable>
+                        <maxLength>20000</maxLength>
+                    </throwableConverter>
+                </stackTrace>
+                <!-- Exception class name -->
+                <throwableClassName>
+                    <fieldName>exceptionClass</fieldName>
+                </throwableClassName>
+            </providers>
+        </encoder>
+    </appender>
+
+    <appender name="DEBUG_FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <rollingPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedRollingPolicy">
+            <fileNamePattern>${HOME_LOG_DEBUG}/${APP_NAME}.%d{yyyy-MM-dd}_%i.log</fileNamePattern>
+            <!-- dung lượng tối đa 1 fileMetadata là 10MB, quá sẽ bị tách ra -->
+            <maxFileSize>10MB</maxFileSize>
+            <!-- fileMetadata lưu tối đa 90 ngày, quá 90 ngày sẽ tự động xóa-->
+            <maxHistory>90</maxHistory>
+            <!-- tổng khối log fileMetadata cực đại là 2GB, nếu quá thì fileMetadata cũ sẽ bị xóa -->
+            <totalSizeCap>2GB</totalSizeCap>
+        </rollingPolicy>
+        <!-- CHỈNH: File debug nhận từ DEBUG trở lên (DEBUG/INFO/WARN/ERROR) -->
+        <filter class="ch.qos.logback.classic.filter.ThresholdFilter">
+            <level>DEBUG</level>
+        </filter>
+        <encoder>
+            <!-- Format đồng nhất: timestamp [level] [thread] user logger location - message exceptionClass:exceptionMessage stackTrace -->
+            <pattern>%d{yyyy-MM-dd HH:mm:ss.SSSZ, GMT+7} [%-5level] [%thread] %X{user} %logger %C{36}.%M\(%F:%L\)- %msg%n%rEx</pattern>
+        </encoder>
+    </appender>
+    
+    <appender name="ERROR_FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <rollingPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedRollingPolicy">
+            <fileNamePattern>${HOME_LOG_DEBUG}/${APP_NAME}-err.%d{yyyy-MM-dd}_%i.log</fileNamePattern>
+            <!-- dung lượng tối đa 1 fileMetadata là 10MB, quá sẽ bị tách ra -->
+            <maxFileSize>10MB</maxFileSize>
+            <!-- fileMetadata lưu tối đa 90 ngày, quá 90 ngày sẽ tự động xóa-->
+            <maxHistory>90</maxHistory>
+            <!-- tổng khối log fileMetadata cực đại là 500MB, nếu quá thì fileMetadata cũ sẽ bị xóa -->
+            <totalSizeCap>500MB</totalSizeCap>
+        </rollingPolicy>
+        <!-- CHỈNH QUAN TRỌNG: File error CHỈ nhận ERROR trở lên -->
+        <filter class="ch.qos.logback.classic.filter.ThresholdFilter">
+            <level>ERROR</level>
+        </filter>
+        <encoder>
+            <!-- Format đồng nhất: timestamp [level] [thread] user logger location - message exceptionClass:exceptionMessage stackTrace -->
+            <pattern>%d{yyyy-MM-dd HH:mm:ss.SSSZ, GMT+7} [%-5level] [%thread] %X{user} %logger %C{36}.%M\(%F:%L\)- %msg%n%rEx</pattern>
+        </encoder>
+    </appender>
+    
+    <!-- Root logger - tất cả log từ INFO trở lên -->
+    <!-- Console + JSON_FILE cho Fluent/Kibana -->
+    <root level="INFO">
+        <appender-ref ref="ConsoleAppender"/>
+        <appender-ref ref="JSON_FILE" />
+    </root>
+    
+    <!-- Logger cho com.fpt package - INFO level -->
+    <!-- additivity="true" để kế thừa Console + JSON_FILE từ root -->
+    <!-- Chỉ thêm DEBUG_FILE và ERROR_FILE riêng cho app_log_debug -->
+    <logger name="com.fpt" level="INFO" additivity="true">
+        <appender-ref ref="DEBUG_FILE"/>
+        <appender-ref ref="ERROR_FILE"/>
+    </logger>
+    
+    <!-- Logger riêng cho GlobalExceptionHandler - đảm bảo ERROR được log đầy đủ -->
+    <!-- additivity="true" để kế thừa từ root và com.fpt -->
+    <logger name="com.fpt.core.server.handler.GlobalExceptionHandler" level="ERROR" additivity="true">
+        <!-- Không cần thêm appender-ref vì đã thừa hưởng đầy đủ từ root + com.fpt -->
+    </logger>
+
+<!--     <springProfile name="local">
+        <root level="INFO">
+            <appender-ref ref="ConsoleAppender"/>
+            <appender-ref ref="JSON_FILE" />
+            <appender-ref ref="DEBUG_FILE"/>
+        </root>
+        <logger name="com.fpt.server" level="TRACE" additivity="false">
+            <appender-ref ref="ConsoleAppender"/>
+            <appender-ref ref="JSON_FILE"/>
+            <appender-ref ref="DEBUG_FILE"/>
+        </logger>
+    </springProfile> -->
+</configuration>

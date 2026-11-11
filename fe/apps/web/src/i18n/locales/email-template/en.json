@@ -1,0 +1,34 @@
+{
+    "fields": {
+        "eventType": "Event Type",
+        "subjectTemplate": "Subject Template",
+        "bodyTemplate": "Body Template",
+        "variables": "Supported Variables",
+        "variablesHint": "Click on variable to copy quickly"
+    },
+    "messages": {
+        "updateSuccess": "Email template updated successfully",
+        "confirmActiveTitle": "Confirm activation",
+        "confirmActive": "Are you sure you want to activate this email template \"{{name}}\"?",
+        "confirmInactiveTitle": "Confirm deactivation",
+        "confirmInactive": "Are you sure you want to deactivate this email template \"{{name}}\"?",
+        "activeSuccess": "Email template activated successfully!",
+        "inactiveSuccess": "Email template deactivated successfully!",
+        "subjectRequired": "Subject template is required",
+        "bodyRequired": "Body template is required",
+        "unsupportedVariables": "The following variables are not supported for this event: {{vars}}",
+        "copied": "Copied variable {{token}} to clipboard",
+        "copyFailed": "Failed to copy",
+        "clickToCopy": "Click to copy",
+        "confirmActiveBulkTitle": "Confirm bulk activation",
+        "confirmActiveBulk": "Are you sure you want to activate {{count}} selected email template(s)?",
+        "confirmInactiveBulkTitle": "Confirm bulk deactivation",
+        "confirmInactiveBulk": "Are you sure you want to deactivate {{count}} selected email template(s)?",
+        "activeBulkSuccess": "Bulk activation successful!",
+        "inactiveBulkSuccess": "Bulk deactivation successful!"
+    },
+    "actions": {
+        "activeBulk": "Activate",
+        "inactiveBulk": "Deactivate"
+    }
+}

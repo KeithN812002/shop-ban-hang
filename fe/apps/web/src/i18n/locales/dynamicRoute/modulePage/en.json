@@ -1,0 +1,12 @@
+{
+    "greetingPrefix": "Hello,",
+    "systemTitle": "Management system",
+    "selectModuleTitle": "Select functional module",
+    "selectModuleDescription": "Please select a module to access the system",
+    "items": {
+        "sa": "System"
+    },
+    "accessDeniedTitle": "No access to the system",
+    "accessDeniedDescription": "Your account has not been granted access to the system. Please contact your administrator to request access and support.",
+    "backToLogin": "Back to login page"
+}

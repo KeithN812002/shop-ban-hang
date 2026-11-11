@@ -1,0 +1,12 @@
+{
+    "greetingPrefix": "Xin chào,",
+    "systemTitle": "Hệ thống quản lý",
+    "selectModuleTitle": "Chọn phân hệ chức năng",
+    "selectModuleDescription": "Anh/chị vui lòng chọn 1 phân hệ để truy cập vào hệ thống",
+    "items": {
+        "sa": "Hệ thống"
+    },
+    "accessDeniedTitle": "Không có quyền truy cập hệ thống",
+    "accessDeniedDescription": "Tài khoản của anh/chị chưa được cấp quyền truy cập vào hệ thống. Anh/chị vui lòng liên hệ quản trị viên để được cấp quyền và hỗ trợ.",
+    "backToLogin": "Quay về trang đăng nhập"
+}

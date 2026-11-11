@@ -1,0 +1,137 @@
+@import 'tailwindcss';
+
+/* Class names used by the shared @workspace/ui pieces we reuse (Skeleton, Sonner toasts). */
+@source "../../../../packages/ui/src/components/Skeleton";
+@source "../../../../packages/ui/src/components/Sonner";
+@source "../../../../packages/ui/src/components/Button";
+
+@theme {
+    --font-sans:
+        'Inter', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+        sans-serif;
+
+    /* Brand: Shopee-like orange/red */
+    --color-brand-50: #fff4f0;
+    --color-brand-100: #ffe5dc;
+    --color-brand-200: #ffc9b8;
+    --color-brand-300: #ffa186;
+    --color-brand-400: #fb7650;
+    --color-brand-500: #ee4d2d;
+    --color-brand-600: #d73f21;
+    --color-brand-700: #b3311a;
+    --color-brand-800: #8f2a19;
+    --color-brand-900: #762719;
+
+    --color-page: #f5f5f5;
+
+    /* Tokens consumed by the reused @workspace/ui components */
+    --color-background: #ffffff;
+    --color-background-secondary: #fafafa;
+    --color-background-tertiary: #f0f0f0;
+    --color-foreground: #262626;
+    --color-popover: #ffffff;
+    --color-popover-foreground: #262626;
+    --color-border: #e5e5e5;
+    --color-muted-foreground: #737373;
+    --color-secondary-foreground: #404040;
+    --color-accent: #f5f5f5;
+    --color-accent-foreground: #171717;
+    --color-primary: #ee4d2d;
+    --color-primary-foreground: #d73f21;
+    --color-destructive: #dc2626;
+    --color-destructive-foreground: #dc2626;
+    --color-ring: #ee4d2d;
+    --shadow-popover: 0 10px 25px 0 rgb(0 0 0 / 0.12);
+
+    --animate-fade-in: fade-in 0.2s ease-out both;
+    --animate-slide-up: slide-up 0.25s ease-out both;
+    --animate-bounce-dot: bounce-dot 1.2s infinite ease-in-out both;
+
+    @keyframes fade-in {
+        from {
+            opacity: 0;
+        }
+        to {
+            opacity: 1;
+        }
+    }
+    @keyframes slide-up {
+        from {
+            opacity: 0;
+            transform: translateY(8px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+    @keyframes bounce-dot {
+        0%,
+        80%,
+        100% {
+            transform: scale(0.6);
+            opacity: 0.5;
+        }
+        40% {
+            transform: scale(1);
+            opacity: 1;
+        }
+    }
+}
+
+@layer base {
+    *,
+    ::before,
+    ::after {
+        border-color: var(--color-border);
+    }
+
+    html {
+        scroll-behavior: smooth;
+    }
+
+    body {
+        background-color: var(--color-page);
+        color: var(--color-foreground);
+        min-height: 100vh;
+    }
+
+    button:not(:disabled),
+    [role='button']:not([aria-disabled='true']) {
+        cursor: pointer;
+    }
+
+    :focus-visible {
+        outline: 2px solid var(--color-brand-500);
+        outline-offset: 2px;
+    }
+
+    dialog::backdrop {
+        background: rgb(0 0 0 / 0.5);
+    }
+}
+
+@utility container-page {
+    margin-inline: auto;
+    width: 100%;
+    max-width: 1200px;
+    padding-inline: 0.75rem;
+    @media (min-width: 640px) {
+        padding-inline: 1rem;
+    }
+}
+
+@utility scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    &::-webkit-scrollbar {
+        display: none;
+    }
+}
+
+@utility line-clamp-2-safe {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}

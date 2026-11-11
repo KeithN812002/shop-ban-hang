@@ -1,0 +1,17 @@
+{
+    "appTitle": "Core Application",
+    "accessDenied": {
+        "title": "Access denied",
+        "description": "You do not have permission to access this page."
+    },
+    "welcome": {
+        "title": "Welcome",
+        "subtitle": "Core Starter",
+        "description1": "A shared foundation for new projects.",
+        "description2": "Select a feature group from the left menu to get started."
+    },
+    "defaultPage": {
+        "noComponentTitle": "The function \"{{menuName}}\" does not have a component yet.",
+        "contactAdmin": "Please contact the administrator for support."
+    }
+}

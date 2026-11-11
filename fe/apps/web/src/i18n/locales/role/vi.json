@@ -1,0 +1,44 @@
+{
+    "title": {
+        "list": "Danh sách chức năng"
+    },
+    "fields": {
+        "code": "Mã nhóm quyền",
+        "name": "Tên nhóm quyền",
+        "appCode": "Mã ứng dụng"
+    },
+    "actions": {
+        "activeBulk": "Kích hoạt",
+        "inactiveBulk": "Dừng hoạt động",
+        "deleteBulk": "Xóa"
+    },
+    "messages": {
+        "confirmActiveTitle": "Xác nhận kích hoạt nhóm quyền",
+        "confirmActive": "Anh/chị có chắc chắn muốn kích hoạt nhóm quyền \"{{name}}\" không?",
+        "confirmInactiveTitle": "Xác nhận dừng hoạt động nhóm quyền",
+        "confirmInactive": "Tất cả các tài khoản thuộc nhóm quyền \"{{name}}\" sẽ bị dừng hoạt động. Anh/chị có chắc chắn muốn thực hiện thao tác này không?",
+        "confirmDelete": "Anh/chị có chắc chắn muốn xóa nhóm quyền \"{{name}}\" không?",
+        "createSuccess": "Thêm mới nhóm quyền thành công!",
+        "createError": "Không thể thêm mới nhóm quyền.",
+        "updateSuccess": "Cập nhật nhóm quyền thành công!",
+        "updateError": "Không thể cập nhật nhóm quyền.",
+        "deleteSuccess": "Xóa nhóm quyền thành công!",
+        "deleteError": "Không thể xóa nhóm quyền.",
+        "activeSuccess": "Kích hoạt nhóm quyền thành công!",
+        "activeError": "Không thể kích hoạt nhóm quyền.",
+        "inactiveSuccess": "Ngừng kích hoạt nhóm quyền thành công!",
+        "inactiveError": "Không thể ngừng kích hoạt nhóm quyền.",
+        "confirmActiveBulkTitle": "Xác nhận kích hoạt hàng loạt",
+        "confirmActiveBulk": "Anh/chị có chắc chắn muốn kích hoạt {{count}} nhóm quyền đã chọn không?",
+        "confirmInactiveBulkTitle": "Xác nhận dừng hoạt động hàng loạt",
+        "confirmInactiveBulk": "Anh/chị có chắc chắn muốn dừng hoạt động {{count}} nhóm quyền đã chọn không?",
+        "confirmDeleteBulkTitle": "Xác nhận xóa hàng loạt",
+        "confirmDeleteBulk": "Anh/chị có chắc chắn muốn xóa {{count}} nhóm quyền đã chọn không?",
+        "activeBulkSuccess": "Kích hoạt hàng loạt thành công!",
+        "inactiveBulkSuccess": "Dừng hoạt động hàng loạt thành công!",
+        "deleteBulkSuccess": "Xóa hàng loạt thành công!"
+    },
+    "errors": {
+        "permissionRequired": "Vui lòng chọn tối thiểu 1 chức năng."
+    }
+}

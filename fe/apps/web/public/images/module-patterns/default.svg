@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 240" width="500" height="240" role="img" aria-label="Hoa van mac dinh">
+    <title>Hoa van mac dinh</title>
+    <defs>
+        <radialGradient id="fade" cx="50%" cy="50%" r="46%">
+            <stop offset="0%" stop-color="#000" stop-opacity=".94"/>
+            <stop offset="55%" stop-color="#000" stop-opacity=".42"/>
+            <stop offset="100%" stop-color="#000" stop-opacity="0"/>
+        </radialGradient>
+        <mask id="clear">
+            <rect width="500" height="240" fill="#fff"/>
+            <rect width="500" height="240" fill="url(#fade)"/>
+        </mask>
+    </defs>
+    <g mask="url(#clear)" color="#475569" fill="none" stroke="currentColor" stroke-opacity=".24" stroke-width="2"
+       stroke-linecap="round" stroke-linejoin="round">
+        <g stroke-opacity=".1" stroke-width="1.6">
+        <path d="M -46 -14 C -86 66, -86 174, -46 254"/>
+        <path d="M 28 -14 C -2 66, -2 174, 28 254"/>
+        <path d="M 102 -14 C 82 66, 82 174, 102 254"/>
+        <path d="M 176 -14 C 166 66, 166 174, 176 254"/>
+        <path d="M 250 -14 C 250 66, 250 174, 250 254"/>
+        <path d="M 324 -14 C 334 66, 334 174, 324 254"/>
+        <path d="M 398 -14 C 418 66, 418 174, 398 254"/>
+        <path d="M 472 -14 C 502 66, 502 174, 472 254"/>
+        <path d="M 546 -14 C 586 66, 586 174, 546 254"/>
+        <path d="M -14 -14 C 140 -36, 360 -36, 514 -14"/>
+        <path d="M -14 53 C 140 42, 360 42, 514 53"/>
+        <path d="M -14 120 C 140 120, 360 120, 514 120"/>
+        <path d="M -14 187 C 140 198, 360 198, 514 187"/>
+        <path d="M -14 254 C 140 276, 360 276, 514 254"/>
+        </g>
+    </g>
+</svg>

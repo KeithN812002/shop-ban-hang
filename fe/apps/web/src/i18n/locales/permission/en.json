@@ -1,0 +1,138 @@
+{
+    "actions": {
+        "addFunction": "Add function",
+        "addApi": "Add API"
+    },
+    "title": {
+        "createEmptyModule": "Create module",
+        "createEmptyGroup": "Create function group",
+        "createEmptyMenu": "Create function menu",
+        "createEmptyPage": "Create function page",
+        "detailModule": "Module detail",
+        "detailGroup": "Function group detail",
+        "detailMenu": "Function menu detail",
+        "detailPage": "Function page detail"
+    },
+    "fields": {
+        "type": "Function type",
+        "parentCode": "Parent function",
+        "code": "Function code",
+        "name": "Function name",
+        "foreignName": "Foreign name",
+        "icon": "Icon",
+        "sortOrder": "Sort Order",
+        "urlSegment": "URL",
+        "fullUrl": "Full URL",
+        "method": "Method",
+        "uri": "URI",
+        "pathFolder": "Path folder",
+        "description": "Description",
+        "status": "Status"
+    },
+    "typeLabels": {
+        "module": "Function Module",
+        "group": "Function Group",
+        "menu": "Function Menu",
+        "page": "Function Page"
+    },
+    "buttonTypes": {
+        "export": "Export data",
+        "view": "View",
+        "create": "Create",
+        "update": "Update",
+        "delete": "Delete",
+        "active": "Activate",
+        "inactive": "Deactivate"
+    },
+    "tables": {
+        "columns": {
+            "buttonAction": "Action Code"
+        },
+        "functions": {
+            "title": "Functions ({{count}})",
+            "empty": "No function records",
+            "code": "Function Code",
+            "name": "Function Name"
+        },
+        "apis": {
+            "title": "APIs ({{count}})",
+            "empty": "No API records",
+            "code": "API Code",
+            "name": "API Name"
+        }
+    },
+    "placeholders": {
+        "name": "Enter name",
+        "uri": "Enter URI"
+    },
+    "dialog": {
+        "createChildTitle": "Choose what to create",
+        "createChildDescription": "Under a module or group, you can create a Group or Menu."
+    },
+    "messages": {
+        "unsupportedType": "Unsupported type",
+        "confirmDelete": "Are you sure you want to delete \"{{name}}\"?",
+        "confirmDeleteWithChildren": "Deleting \"{{name}}\" will also delete {{count}} child items. Are you sure?",
+        "selectItemToViewDetail": "Select a function to view details",
+        "createSuccess": "Permission created successfully!",
+        "createError": "Unable to create permission",
+        "updateSuccess": "Permission updated successfully!",
+        "updateError": "Unable to update permission",
+        "deleteSuccess": "Permission deleted successfully!",
+        "deleteError": "Unable to delete permission",
+        "formInvalid": "Please review required fields before saving",
+        "childRequired": "Please fill in all required fields for functions and APIs",
+        "selectItemDescription": "Please select an item from the menu tree on the left to view detailed information or make edits.",
+        "exportSuccess": "Permissions exported successfully",
+        "importSuccess": "Permissions imported successfully",
+        "urlSegmentLeadingSlash": "The path must start with \"/\".",
+        "childSortOrderInvalid": "Display order of functions and APIs must not be negative."
+    },
+    "import": {
+        "previewTitle": "Preview changes",
+        "btnExport": "Export data",
+        "btnImport": "Import data",
+        "btnPreview": "Preview",
+        "btnApply": "Apply",
+        "fileLabel": "JSON file exported from the source environment",
+        "fileRequired": "Please select a file",
+        "blockersTitle": "Blocking errors - cannot apply",
+        "cutTitle": "Role assignments to be cut",
+        "cutDescription": "{{count}} role assignments will be removed because their permission is no longer in the file.",
+        "renameTitle": "Possible code rename",
+        "uriWarningsTitle": "Functions declaring APIs that do not exist in the system (can still be applied)",
+        "applyScopeHint": "Only ticked groups are applied. Unticked groups are skipped and left exactly as they are.",
+        "summary": {
+            "fileCount": "In file",
+            "toAdd": "Added",
+            "toUpdate": "Updated",
+            "toDelete": "Deleted"
+        },
+        "fields": {
+            "name": "Name",
+            "foreignName": "Foreign name",
+            "parentCode": "Parent code",
+            "appCode": "App code",
+            "moduleCode": "Module code",
+            "type": "Type",
+            "url": "URL",
+            "urlSegment": "URL segment",
+            "pathFolder": "Path folder",
+            "uri": "URI",
+            "method": "Method",
+            "buttonAction": "Button action",
+            "icon": "Icon",
+            "sortOrder": "Sort order",
+            "description": "Description",
+            "status": "Status"
+        },
+        "emptyValue": "(empty)",
+        "rolesAffected": "Roles affected",
+        "noChangesTitle": "No changes",
+        "noChangesDescription": "Current data already matches the file. Nothing to apply.",
+        "confirmTitle": "Confirm import",
+        "confirmDescription": "This will add {{added}}, update {{updated}} and delete {{deleted}} permissions. Are you sure you want to continue?",
+        "confirmDescriptionWithCut": "This will add {{added}}, update {{updated}} and delete {{deleted}} permissions, and cut {{cut}} role assignments. This action cannot be undone. Are you sure you want to continue?",
+        "supportFormats": "Only JSON (.json) files up to 10MB are supported"
+    }
+}

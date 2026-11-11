@@ -1,0 +1,378 @@
+{
+    "status": {
+        "entity": {
+            "PENDING": "Chờ duyệt",
+            "ACTIVE": "Đang hoạt động",
+            "REJECTED": "Đã từ chối",
+            "SUSPENDED": "Tạm ngưng"
+        },
+        "product": {
+            "DRAFT": "Nháp",
+            "ACTIVE": "Đang bán",
+            "HIDDEN": "Đang ẩn",
+            "BANNED": "Bị cấm"
+        },
+        "order": {
+            "PENDING": "Chờ xác nhận",
+            "CONFIRMED": "Đã xác nhận",
+            "READY_TO_SHIP": "Chờ lấy hàng",
+            "PICKING": "Đang lấy hàng",
+            "SHIPPING": "Đang giao",
+            "DELIVERED": "Đã giao",
+            "COMPLETED": "Hoàn thành",
+            "CANCELLED": "Đã hủy",
+            "RETURNING": "Đang hoàn hàng",
+            "RETURNED": "Đã hoàn hàng",
+            "RETURN_REQUESTED": "Yêu cầu trả hàng",
+            "RETURN_APPROVED": "Đã chấp nhận trả hàng",
+            "RETURN_SHIPPING": "Đang gửi trả",
+            "RETURN_RECEIVED": "Shop đã nhận hàng trả",
+            "REFUNDED": "Đã hoàn tiền"
+        },
+        "returnRequest": {
+            "REQUESTED": "Chờ shop phản hồi",
+            "APPROVED": "Đã chấp nhận",
+            "REJECTED": "Shop từ chối",
+            "DISPUTED": "Đang khiếu nại",
+            "CANCELLED": "Đã rút yêu cầu",
+            "CLOSED": "Đã đóng"
+        },
+        "active": {
+            "ACTIVE": "Hoạt động",
+            "INACTIVE": "Dừng hoạt động"
+        },
+        "payment": {
+            "UNPAID": "Chưa thanh toán",
+            "PAID": "Đã thanh toán"
+        }
+    },
+    "role": {
+        "BUYER": "Người mua",
+        "SELLER": "Người bán",
+        "SHIPPER": "Shipper"
+    },
+    "discountType": {
+        "PERCENT": "Phần trăm (%)",
+        "FIXED": "Số tiền cố định"
+    },
+    "actions": {
+        "approve": "Duyệt",
+        "reject": "Từ chối",
+        "suspend": "Tạm ngưng",
+        "reactivate": "Kích hoạt lại",
+        "ban": "Cấm sản phẩm",
+        "unban": "Gỡ cấm",
+        "lock": "Khóa tài khoản",
+        "unlock": "Mở khóa",
+        "cancelOrder": "Hủy đơn hàng",
+        "confirmReturned": "Xác nhận đã nhận hàng hoàn",
+        "resolveReturn": "Xử lý khiếu nại",
+        "markRefunded": "Xác nhận đã hoàn tiền"
+    },
+    "reason": {
+        "label": "Lý do",
+        "rejectReason": "Lý do từ chối",
+        "banReason": "Lý do cấm",
+        "cancelReason": "Lý do hủy"
+    },
+    "dashboard": {
+        "title": "Thống kê thu nhập",
+        "dateRange": "Khoảng thời gian",
+        "period": "Kỳ",
+        "retry": "Thử lại",
+        "groupBy": {
+            "label": "Nhóm theo",
+            "DAY": "Ngày",
+            "MONTH": "Tháng"
+        },
+        "kpi": {
+            "title": "Chỉ số tổng quan",
+            "gmv": "Tổng giá trị giao dịch (GMV)",
+            "platformRevenue": "Doanh thu sàn",
+            "completedOrders": "Đơn hoàn thành",
+            "cancelledOrders": "Đơn hủy",
+            "newUsers": "Người dùng mới",
+            "activeStores": "Cửa hàng hoạt động",
+            "activeShippers": "Shipper hoạt động",
+            "pending": "Chờ duyệt",
+            "pendingHint": "Cửa hàng / Shipper đang chờ duyệt"
+        },
+        "charts": {
+            "revenue": "Doanh thu theo thời gian",
+            "revenueCaption": "Biểu đồ GMV, doanh thu sàn và số đơn hàng theo kỳ",
+            "ordersByStatus": "Đơn hàng theo trạng thái"
+        },
+        "series": {
+            "gmv": "GMV",
+            "platformRevenue": "Doanh thu sàn",
+            "orders": "Số đơn"
+        },
+        "top": {
+            "stores": "Cửa hàng nổi bật",
+            "products": "Sản phẩm bán chạy",
+            "categories": "Danh mục nổi bật",
+            "orders": "{{value}} đơn",
+            "sold": "Đã bán {{value}}"
+        }
+    },
+    "account": {
+        "fields": {
+            "keyword": "Tài khoản / Tên / Email / SĐT",
+            "role": "Vai trò",
+            "username": "Tài khoản",
+            "fullName": "Họ tên",
+            "contact": "Liên hệ",
+            "roles": "Vai trò",
+            "orderCount": "Số đơn",
+            "totalSpent": "Tổng chi tiêu",
+            "store": "Cửa hàng",
+            "shipper": "Shipper"
+        },
+        "viewStore": "Xem cửa hàng",
+        "viewShipper": "Xem hồ sơ shipper",
+        "confirm": {
+            "lockTitle": "Xác nhận khóa tài khoản",
+            "lock": "Anh/chị có chắc chắn muốn khóa tài khoản \"{{name}}\" không? Người dùng sẽ không thể đăng nhập.",
+            "unlockTitle": "Xác nhận mở khóa tài khoản",
+            "unlock": "Anh/chị có chắc chắn muốn mở khóa tài khoản \"{{name}}\" không?"
+        },
+        "messages": {
+            "lockSuccess": "Khóa tài khoản thành công!",
+            "unlockSuccess": "Mở khóa tài khoản thành công!"
+        }
+    },
+    "category": {
+        "fields": {
+            "name": "Tên danh mục",
+            "slug": "Slug",
+            "icon": "Biểu tượng",
+            "sortOrder": "Thứ tự hiển thị",
+            "parent": "Danh mục cha",
+            "imageUrl": "Đường dẫn ảnh",
+            "imagePreview": "Xem trước ảnh danh mục"
+        },
+        "errors": {
+            "slugFormat": "Slug chỉ gồm chữ thường, số và dấu gạch ngang (ví dụ: thoi-trang-nam)."
+        },
+        "confirm": {
+            "delete": "Anh/chị có chắc chắn muốn xóa danh mục \"{{name}}\" không?"
+        },
+        "messages": {
+            "createSuccess": "Thêm mới danh mục thành công!",
+            "updateSuccess": "Cập nhật danh mục thành công!",
+            "deleteSuccess": "Xóa danh mục thành công!"
+        }
+    },
+    "store": {
+        "statusTabs": "Lọc cửa hàng theo trạng thái",
+        "fields": {
+            "keyword": "Tên cửa hàng / Chủ cửa hàng",
+            "name": "Tên cửa hàng",
+            "owner": "Chủ cửa hàng",
+            "province": "Tỉnh/Thành phố",
+            "phone": "Số điện thoại",
+            "address": "Địa chỉ",
+            "productCount": "Số sản phẩm",
+            "followerCount": "Người theo dõi",
+            "rating": "Đánh giá",
+            "description": "Mô tả"
+        },
+        "confirm": {
+            "approveTitle": "Xác nhận duyệt cửa hàng",
+            "approve": "Anh/chị có chắc chắn muốn duyệt cửa hàng \"{{name}}\" không?",
+            "rejectTitle": "Từ chối cửa hàng",
+            "reject": "Từ chối đăng ký của cửa hàng \"{{name}}\". Vui lòng nhập lý do để chủ cửa hàng biết.",
+            "suspendTitle": "Tạm ngưng cửa hàng",
+            "suspend": "Cửa hàng \"{{name}}\" sẽ bị tạm ngưng bán hàng. Vui lòng nhập lý do.",
+            "reactivateTitle": "Xác nhận kích hoạt lại cửa hàng",
+            "reactivate": "Anh/chị có chắc chắn muốn kích hoạt lại cửa hàng \"{{name}}\" không?"
+        },
+        "messages": {
+            "approveSuccess": "Duyệt cửa hàng thành công!",
+            "rejectSuccess": "Từ chối cửa hàng thành công!",
+            "suspendSuccess": "Tạm ngưng cửa hàng thành công!",
+            "reactivateSuccess": "Kích hoạt lại cửa hàng thành công!"
+        }
+    },
+    "shipper": {
+        "statusTabs": "Lọc shipper theo trạng thái",
+        "fields": {
+            "keyword": "Họ tên / Tài khoản / SĐT",
+            "fullName": "Họ tên",
+            "username": "Tài khoản",
+            "phone": "Số điện thoại",
+            "idNumber": "Số CCCD/CMND",
+            "vehicle": "Phương tiện",
+            "vehicleType": "Loại phương tiện",
+            "vehiclePlate": "Biển số",
+            "areaProvince": "Khu vực hoạt động"
+        },
+        "confirm": {
+            "approveTitle": "Xác nhận duyệt shipper",
+            "approve": "Anh/chị có chắc chắn muốn duyệt shipper \"{{name}}\" không?",
+            "rejectTitle": "Từ chối shipper",
+            "reject": "Từ chối đăng ký của shipper \"{{name}}\". Vui lòng nhập lý do.",
+            "suspendTitle": "Tạm ngưng shipper",
+            "suspend": "Shipper \"{{name}}\" sẽ không thể nhận đơn. Vui lòng nhập lý do.",
+            "reactivateTitle": "Xác nhận kích hoạt lại shipper",
+            "reactivate": "Anh/chị có chắc chắn muốn kích hoạt lại shipper \"{{name}}\" không?"
+        },
+        "messages": {
+            "approveSuccess": "Duyệt shipper thành công!",
+            "rejectSuccess": "Từ chối shipper thành công!",
+            "suspendSuccess": "Tạm ngưng shipper thành công!",
+            "reactivateSuccess": "Kích hoạt lại shipper thành công!"
+        }
+    },
+    "product": {
+        "fields": {
+            "keyword": "Tên sản phẩm",
+            "store": "Cửa hàng",
+            "category": "Danh mục",
+            "name": "Sản phẩm",
+            "price": "Giá bán",
+            "originalPrice": "Giá gốc",
+            "stock": "Tồn kho",
+            "soldCount": "Đã bán",
+            "viewCount": "Lượt xem",
+            "rating": "Đánh giá",
+            "arType": "Loại thử đồ AR",
+            "tags": "Thẻ",
+            "description": "Mô tả",
+            "images": "Hình ảnh sản phẩm",
+            "variants": "Phân loại"
+        },
+        "confirm": {
+            "banTitle": "Cấm sản phẩm",
+            "ban": "Sản phẩm \"{{name}}\" sẽ bị gỡ khỏi gian hàng. Vui lòng nhập lý do.",
+            "unbanTitle": "Xác nhận gỡ cấm sản phẩm",
+            "unban": "Anh/chị có chắc chắn muốn gỡ cấm sản phẩm \"{{name}}\" không?"
+        },
+        "messages": {
+            "banSuccess": "Cấm sản phẩm thành công!",
+            "unbanSuccess": "Gỡ cấm sản phẩm thành công!"
+        }
+    },
+    "order": {
+        "fields": {
+            "code": "Mã đơn hàng",
+            "store": "Cửa hàng",
+            "buyer": "Người mua",
+            "itemCount": "Số sản phẩm",
+            "total": "Tổng tiền",
+            "paymentStatus": "Thanh toán",
+            "createdRange": "Ngày tạo",
+            "receiver": "Người nhận",
+            "receiverPhone": "SĐT người nhận",
+            "shippingAddress": "Địa chỉ giao hàng",
+            "shipper": "Shipper",
+            "shipperPhone": "SĐT shipper",
+            "note": "Ghi chú",
+            "subtotal": "Tiền hàng",
+            "shippingFee": "Phí vận chuyển",
+            "storeDiscount": "Giảm giá cửa hàng",
+            "platformDiscount": "Giảm giá sàn",
+            "platformFee": "Phí sàn",
+            "sellerIncome": "Thu nhập người bán",
+            "shipperFee": "Thu nhập shipper"
+        },
+        "items": "Sản phẩm trong đơn",
+        "amounts": "Chi phí",
+        "history": "Lịch sử đơn hàng",
+        "noHistory": "Chưa có lịch sử.",
+        "source": {
+            "BUYER": "Người mua",
+            "SELLER": "Người bán",
+            "SHIPPER": "Shipper",
+            "ADMIN": "Quản trị viên",
+            "SYSTEM": "Hệ thống"
+        },
+        "confirm": {
+            "cancelTitle": "Hủy đơn hàng",
+            "cancel": "Đơn hàng {{name}} sẽ bị hủy, tồn kho và voucher được hoàn lại. Vui lòng nhập lý do.",
+            "confirmReturnedTitle": "Xác nhận đã nhận hàng hoàn",
+            "confirmReturned": "Xác nhận cửa hàng đã nhận lại hàng của đơn {{name}}? Tồn kho sẽ được hoàn lại và đơn chuyển sang \"Đã hoàn hàng\"."
+        },
+        "messages": {
+            "cancelSuccess": "Hủy đơn hàng thành công!",
+            "confirmReturnedSuccess": "Đã xác nhận nhận hàng hoàn!",
+            "resolveReturnSuccess": "Đã xử lý khiếu nại trả hàng!",
+            "markRefundedSuccess": "Đã ghi nhận hoàn tiền!"
+        },
+        "return": {
+            "section": "Yêu cầu trả hàng/hoàn tiền",
+            "tabsLabel": "Lọc đơn theo yêu cầu trả hàng",
+            "disputeTab": "Khiếu nại trả hàng",
+            "reason": {
+                "DAMAGED": "Hàng bị hư hỏng",
+                "WRONG_ITEM": "Giao sai hàng",
+                "NOT_AS_DESCRIBED": "Không đúng mô tả",
+                "MISSING_PARTS": "Thiếu hàng / phụ kiện",
+                "OTHER": "Lý do khác"
+            },
+            "fields": {
+                "requestStatus": "Trạng thái yêu cầu",
+                "refundAmount": "Số tiền hoàn",
+                "reason": "Lý do trả hàng",
+                "requestedAt": "Gửi yêu cầu lúc",
+                "description": "Mô tả",
+                "photos": "Hình ảnh minh chứng",
+                "bankName": "Ngân hàng",
+                "bankAccountNo": "Số tài khoản",
+                "bankAccountName": "Chủ tài khoản",
+                "sellerNote": "Phản hồi của shop",
+                "disputeReason": "Nội dung khiếu nại",
+                "disputedAt": "Khiếu nại lúc",
+                "adminNote": "Ghi chú của admin",
+                "refundedAt": "Hoàn tiền lúc",
+                "refundNote": "Ghi chú hoàn tiền",
+                "refundProof": "Chứng từ hoàn tiền"
+            },
+            "resolve": {
+                "title": "Xử lý khiếu nại trả hàng",
+                "description": "Quyết định khiếu nại của người mua cho đơn {{name}}. Chấp nhận: shop phải nhận lại hàng và hoàn tiền; từ chối: đơn được hoàn tất.",
+                "note": "Ghi chú",
+                "approve": "Chấp nhận trả hàng",
+                "reject": "Từ chối khiếu nại"
+            },
+            "refund": {
+                "title": "Xác nhận đã hoàn tiền",
+                "description": "Ghi nhận đã chuyển khoản hoàn tiền cho người mua của đơn {{name}}.",
+                "proofUrl": "Liên kết ảnh chứng từ (không bắt buộc)",
+                "proofUrlInvalid": "Liên kết ảnh không hợp lệ.",
+                "note": "Ghi chú (không bắt buộc)"
+            }
+        }
+    },
+    "voucher": {
+        "fields": {
+            "keyword": "Mã / Tên voucher",
+            "code": "Mã voucher",
+            "name": "Tên voucher",
+            "discount": "Giảm giá",
+            "discountType": "Loại giảm giá",
+            "discountValue": "Giá trị giảm",
+            "maxDiscount": "Giảm tối đa",
+            "minOrderValue": "Đơn tối thiểu",
+            "usage": "Đã dùng / Giới hạn",
+            "usageLimit": "Tổng lượt dùng",
+            "perUserLimit": "Lượt dùng mỗi người",
+            "startAt": "Bắt đầu",
+            "endAt": "Kết thúc"
+        },
+        "errors": {
+            "codeFormat": "Mã voucher chỉ gồm chữ cái, số, dấu gạch ngang và gạch dưới.",
+            "discountPositive": "Giá trị giảm phải lớn hơn 0.",
+            "percentMax": "Giảm theo phần trăm không được vượt quá {{max}}%.",
+            "endAfterStart": "Thời gian kết thúc phải sau thời gian bắt đầu."
+        },
+        "confirm": {
+            "delete": "Anh/chị có chắc chắn muốn xóa voucher \"{{name}}\" không?"
+        },
+        "messages": {
+            "createSuccess": "Thêm mới voucher thành công!",
+            "updateSuccess": "Cập nhật voucher thành công!",
+            "deleteSuccess": "Xóa voucher thành công!"
+        }
+    }
+}

@@ -1,0 +1,62 @@
+{
+    "fields": {
+        "userName": "Tài khoản",
+        "personalName": "Tên người dùng",
+        "role": "Phân quyền",
+        "assignRoles": "Phân quyền",
+        "isInternal": "Loại tài khoản",
+        "authorizationStatus": "Trạng thái phân quyền",
+        "unassignedRole": "Chưa phân quyền",
+        "assignedRole": "Đã phân quyền",
+        "externalUnitCode": "Mã tổ chức"
+    },
+    "isInternal": {
+        "true": "Nội bộ",
+        "false": "Bên ngoài"
+    },
+    "actions": {
+        "assignRoles": "Phân quyền người dùng",
+        "saveData": "Lưu dữ liệu",
+        "resetPassword": "Khôi phục mật khẩu",
+        "resetPasswordBulk": "Khôi phục mật khẩu",
+        "activeBulk": "Kích hoạt",
+        "inactiveBulk": "Dừng hoạt động",
+        "deleteBulk": "Xóa"
+    },
+    "errors": {
+        "roleRequired": "Vui lòng chọn tối thiểu 1 nhóm quyền cho người dùng.",
+        "userNameFormat": "Tài khoản chỉ gồm chữ không dấu, số và các ký tự . _ - (không bắt đầu/kết thúc bằng ký tự đặc biệt, không có khoảng trắng)."
+    },
+    "messages": {
+        "confirmActive": "Anh/chị có chắc chắn muốn kích hoạt người dùng \"{{name}}\" không?",
+        "confirmActiveTitle": "Xác nhận kích hoạt",
+        "confirmInactiveTitle": "Xác nhận dừng hoạt động",
+        "confirmInactive": "Anh/chị có chắc chắn muốn dừng hoạt động người dùng \"{{name}}\" không?",
+        "confirmDelete": "Anh/chị có chắc chắn muốn xóa người dùng \"{{name}}\" không?",
+        "confirmResetPassword": "Anh/chị có chắc chắn muốn khôi phục mật khẩu của người dùng \"{{name}}\" không?",
+        "confirmResetPasswordTitle": "Xác nhận khôi phục mật khẩu",
+        "confirmResetPasswordBulk": "Anh/chị có chắc chắn muốn khôi phục mật khẩu hàng loạt cho {{count}} người dùng đã chọn không?",
+        "confirmResetPasswordBulkTitle": "Xác nhận khôi phục mật khẩu hàng loạt",
+        "confirmActiveBulk": "Anh/chị có chắc chắn muốn kích hoạt {{count}} người dùng đã chọn không?",
+        "confirmActiveBulkTitle": "Xác nhận kích hoạt hàng loạt",
+        "confirmInactiveBulk": "Anh/chị có chắc chắn muốn dừng hoạt động {{count}} người dùng đã chọn không?",
+        "confirmInactiveBulkTitle": "Xác nhận dừng hoạt động hàng loạt",
+        "confirmDeleteBulk": "Anh/chị có chắc chắn muốn xóa {{count}} người dùng đã chọn không?",
+        "confirmDeleteBulkTitle": "Xác nhận xóa hàng loạt",
+        "activeBulkSuccess": "Kích hoạt hàng loạt thành công!",
+        "inactiveBulkSuccess": "Dừng hoạt động hàng loạt thành công!",
+        "deleteBulkSuccess": "Xóa hàng loạt thành công!",
+        "resetPasswordSuccess": "Khôi phục mật khẩu thành công!",
+        "resetPasswordBulkSuccess": "Khôi phục mật khẩu hàng loạt thành công!",
+        "createSuccess": "Thêm mới người dùng thành công!",
+        "createError": "Không thể thêm mới người dùng.",
+        "updateSuccess": "Cập nhật người dùng thành công!",
+        "updateError": "Không thể cập nhật người dùng.",
+        "deleteSuccess": "Xóa người dùng thành công!",
+        "deleteError": "Không thể xóa người dùng.",
+        "activeSuccess": "Kích hoạt người dùng thành công!",
+        "activeError": "Không thể kích hoạt người dùng.",
+        "inactiveSuccess": "Ngừng kích hoạt người dùng thành công!",
+        "inactiveError": "Không thể ngừng kích hoạt người dùng."
+    }
+}

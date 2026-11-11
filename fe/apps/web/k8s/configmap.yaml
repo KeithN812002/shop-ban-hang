@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+    name: web-config
+    namespace: default
+data:
+    api-base-url: 'https://api.example.com/api/'
+    app-code: 'APP'
+    public-url: '/'
+    sso-url: 'https://sso.example.com'
+    client-id: 'web-client'
+    redirect-url: 'http://localhost:8088/'
+    realm: 'realm'
+    socket-url: 'ws://localhost:3000'
+    socket-path: '/socket.io'
